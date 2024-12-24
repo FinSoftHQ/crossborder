@@ -4,23 +4,24 @@ import { ref, computed } from 'vue';
 const products = ref([
     {
         id: 'product1',
-        name: 'Restored Apple Watch Series 8 (GPS) 41mm Midnight Aluminum Case with Midnight Sport Band',
-        price: 598,
+        name: 'Apple iMac 27”',
+        price: 1499,
         quantity: 1,
         selected: true,
-        imageLight: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg',
-        imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg',
+        imageLight: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front-dark.svg',
+        imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg' ,
     },
     {
         id: 'product2',
-        name: 'Apple - MacBook Pro 16" Laptop, M3 Pro chip, 36GB Memory, 18-core GPU, 512GB SSD, Space Black',
-        price: 1799,
+        name: 'Apple iPhone 14',
+        price: 1998,
         quantity: 1,
         selected: true,
-        imageLight: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/macbook-pro-light.svg',
-        imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/macbook-pro-dark.svg',
+        imageLight: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg',
+        imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg',
     },
 ]);
+
 
 const incrementQuantity = (productId: string) => {
     const product = products.value.find((product) => product.id === productId);
@@ -51,8 +52,70 @@ const totalPrice = computed(() => {
     <UContainer>
         <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
             <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
-                <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Shopping Cart</h2>
-    
+                <div class="mb-4 items-end justify-between space-y-4 sm:flex sm:space-y-0 md:mb-8">
+                    <div>
+                        <nav class="flex"
+                             aria-label="Breadcrumb">
+                            <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                                <li class="inline-flex items-center">
+                                    <a href="#"
+                                       class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary-600 dark:text-gray-400 dark:hover:text-white">
+                                        <svg class="me-2.5 h-3 w-3"
+                                             aria-hidden="true"
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             fill="currentColor"
+                                             viewBox="0 0 20 20">
+                                            <path
+                                                  d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+                                        </svg>
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="flex items-center">
+                                        <svg class="h-5 w-5 text-gray-400 rtl:rotate-180"
+                                             aria-hidden="true"
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             width="24"
+                                             height="24"
+                                             fill="none"
+                                             viewBox="0 0 24 24">
+                                            <path stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                  d="m9 5 7 7-7 7" />
+                                        </svg>
+                                        <a href="#"
+                                           class="ms-1 text-sm font-medium text-gray-700 hover:text-primary-600 dark:text-gray-400 dark:hover:text-white md:ms-2">สินค้าทั้งหมด</a>
+                                    </div>
+                                </li>
+                                <li aria-current="page">
+                                    <div class="flex items-center">
+                                        <svg class="h-5 w-5 text-gray-400 rtl:rotate-180"
+                                             aria-hidden="true"
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             width="24"
+                                             height="24"
+                                             fill="none"
+                                             viewBox="0 0 24 24">
+                                            <path stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                  d="m9 5 7 7-7 7" />
+                                        </svg>
+                                        <span
+                                              class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400 md:ms-2">รายการที่ต้องการสั่งซื้อ</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </nav>
+                        <h2 class="mt-3 text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">รายการที่ต้องการสั่งซื้อ
+                        </h2>                     
+                        
+                    </div>
+                </div>    
                 <div class="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
                     <div class="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
                         <div class="space-y-6">
@@ -171,24 +234,24 @@ const totalPrice = computed(() => {
                     <div class="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
                         <div
                              class="space-y-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
-                            <p class="text-xl font-semibold text-gray-900 dark:text-white">Order summary</p>
+                            <p class="text-xl font-semibold text-gray-900 dark:text-white">ข้อมูลการชำระเงิน</p>
     
                             <div class="space-y-4">
                                 <div class="space-y-2">
                                     <dl class="flex items-center justify-between gap-4">
-                                        <dt class="text-base font-normal text-gray-500 dark:text-gray-400">Original price
+                                        <dt class="text-base font-normal text-gray-500 dark:text-gray-400">รายการสั่งสินค้า
                                         </dt>
                                         <dd class="text-base font-medium text-gray-900 dark:text-white">${{ totalPrice }}
                                         </dd>
                                     </dl>
     
                                     <dl class="flex items-center justify-between gap-4">
-                                        <dt class="text-base font-normal text-gray-500 dark:text-gray-400">Savings</dt>
+                                        <dt class="text-base font-normal text-gray-500 dark:text-gray-400">ส่วนลด</dt>
                                         <dd class="text-base font-medium text-green-600">-$299.00</dd>
                                     </dl>
     
                                     <dl class="flex items-center justify-between gap-4">
-                                        <dt class="text-base font-normal text-gray-500 dark:text-gray-400">Store Pickup</dt>
+                                        <dt class="text-base font-normal text-gray-500 dark:text-gray-400">การจัดส่ง</dt>
                                         <dd class="text-base font-medium text-gray-900 dark:text-white">$99</dd>
                                     </dl>
     
@@ -200,35 +263,18 @@ const totalPrice = computed(() => {
     
                                 <dl
                                     class="flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700">
-                                    <dt class="text-base font-bold text-gray-900 dark:text-white">Total</dt>
-                                    <dd class="text-base font-bold text-gray-900 dark:text-white">${{ totalPrice + 99 + 799
-                                        - 299 }}</dd>
+                                    <dt class="text-base font-bold text-gray-900 dark:text-white">ยอดรวมทั้งหมด</dt>
+                                    <dd class="text-base font-bold text-gray-900 dark:text-white">${{ totalPrice.toLocaleString() }}</dd>
+
+                               
                                 </dl>
                             </div>
     
-                            <UButton to="/ecommerce/checkout"
+                            <UButton to="/ecommerce/orderSummary"
                                      class="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 ดำเนินการชำระเงิน
                             </UButton>
-                            <div class="flex items-center justify-center gap-2">
-                                <span class="text-sm font-normal text-gray-500 dark:text-gray-400"> or </span>
-                                <a href="#"
-                                   title=""
-                                   class="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">
-                                    Continue Shopping
-                                    <svg class="h-5 w-5"
-                                         aria-hidden="true"
-                                         xmlns="http://www.w3.org/2000/svg"
-                                         fill="none"
-                                         viewBox="0 0 24 24">
-                                        <path stroke="currentColor"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                              stroke-width="2"
-                                              d="M19 12H5m14 0-4 4m4-4-4-4" />
-                                    </svg>
-                                </a>
-                            </div>
+                            
                         </div>
     
                         <!-- <div

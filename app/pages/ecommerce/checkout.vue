@@ -1,6 +1,6 @@
 <template>
     <UContainer>
-        <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
+        <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">            
             <form action="#"
                   class="mx-auto max-w-screen-xl px-4 2xl:px-0">
                 <ol
@@ -668,7 +668,7 @@
                                     </div>
                                 </div>
 
-                                <!-- <div
+                                <div
                                      class="rounded-lg border border-gray-200 bg-gray-50 p-4 ps-4 dark:border-gray-700 dark:bg-gray-800">
                                     <div class="flex items-start">
                                         <div class="flex h-5 items-center">
@@ -735,10 +735,10 @@
                                         <button type="button"
                                                 class="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Edit</button>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
-                        <!-- <div>
+                        <div>
                             <label for="voucher"
                                    class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"> Enter a gift
                                 card,
@@ -752,7 +752,7 @@
                                 <button type="button"
                                         class="flex items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Apply</button>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
 
                     <div class="mt-6 w-full space-y-6 sm:mt-8 lg:mt-0 lg:max-w-xs xl:max-w-md">
