@@ -50,16 +50,10 @@ function copyToClipboard() {
             <div class="flex flex-col gap-4 mt-4">
                 <p id="credit-card-text"
                    class="text-center text-sm font-medium text-gray-900 dark:text-white block">
-                    คัดลอกหรือแชร์ลิงก์นี้เพื่อแบ่งบัน Coin
+                    กดแชร์ QR Code เพื่อโอน Coin ไปยังเพื่อนของคุณ
                 </p>
                 <div class="px-4 pb-4 md:px-5 md:pb-5">
-                    <div class="relative mb-4">
-                        <input id="course-url"
-                               type="text"
-                               class="col-span-6 bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                               value="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/qr-code.svg"
-                               disabled
-                               readonly>
+                    <div class="relative mb-4">                       
                         <button @click="copyToClipboard"
                                 data-tooltip-target="tooltip-course-url"
                                 class="absolute end-2 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg p-2 inline-flex items-center justify-center">
@@ -89,11 +83,12 @@ function copyToClipboard() {
                         </div>
                     </div>
                     <div class="grid grid-cols-2 gap-4">
-                        <UButton to="/coinApp/paycoins"
+                        <UButton to="/coinApp/transferCoin"
                                  class="flex justify-center"
                                  color="white">ย้อนกลับ</UButton>
-                        <UButton class="flex justify-center"
-                                 @click="copyToClipboard">คัดลอกลิงก์</UButton>
+                        <UButton to="/coinApp/home"
+                        class="flex justify-center"
+                                 >แชร์ QR Code</UButton>
                     </div>
                 </div>
             </div>

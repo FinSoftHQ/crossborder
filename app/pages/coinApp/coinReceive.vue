@@ -1,63 +1,19 @@
-<script setup lang="ts">
-import { ref, reactive } from 'vue';
-
-const items = [
-    {
-        slot: 'scan',
-        label: 'สแกนรับ/จ่าย',
-        icon: 'i-bx-scan',
-    },
-]
-
-const accountForm = reactive({ name: 'Benjamin', username: 'benjamincanac' })
-const passwordForm = reactive({ currentPassword: '', newPassword: '' })
-
-const showFooter = ref(false);
-
-function onSubmitAccount() {
-    console.log('Submitted form:', accountForm)
-}
-
-function onSubmitPassword() {
-    console.log('Submitted form:', passwordForm)
-}
-
-const loading = ref(false);
-
-function generateQRCode() {
-    loading.value = true;
-    showFooter.value = true;
-    setTimeout(() => {
-        loading.value = false;
-    }, 500); // Simulate QR code generation delay
-}
-function copyToClipboard() {
-    const copyText = "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/qr-code.svg";
-    navigator.clipboard.writeText(copyText).then(() => {
-        console.log('Copied to clipboard:', copyText);
-    }).catch(err => {
-        console.error('Failed to copy:', err);
-    });
-}
-</script>
-
-<template>
-    <UContainer>
-        <UTabs :items="items"
-               class="w-full">
-            <template #scan="{ item }">
-                <UCard @submit.prevent="onSubmitAccount">
-                    <template #header>
-                        <p class="text-base font-semibold leading-6 text-gray-900 dark:text-white">
-                            {{ item.label }}
+<template><div lass="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full">
+    <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
+        <div class="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5 border-1">
+            <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                    รับ Coin
+                    <p class="text-base font-semibold leading-6 text-gray-900 dark:text-white">
+                            
                         </p>
                         <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
                             สแกน QR Code เพื่อรับ Coin จากเพื่อน หรือ จ่าย Coin
                         </p>
-                    </template>
-
-                    <div class="flex justify-center items-center">
-                        <NuxtLink to="/coinApp/successpay">
+                </h3>              
+            </div>
+            <div class="flex justify-center items-center">
+                        <NuxtLink to="/coinApp/successReceive">
                         <svg class="w-[250px] h-auto text-gray-500 dark:text-gray-400"
                              xmlns="http://www.w3.org/2000/svg"
                              width="24"
@@ -75,14 +31,7 @@ function copyToClipboard() {
                         </svg>
                     </NuxtLink>
                     </div>
-                    <!-- <template #footer>
-                        <UButton type="submit">
-                            บันทึก QR Code
-                        </UButton>
-                    </template> -->
-                </UCard>
-            </template>
-           
-        </UTabs>
-    </UContainer>
+        </div>
+    </div>
+</div>
 </template>

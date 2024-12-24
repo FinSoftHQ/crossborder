@@ -6,12 +6,12 @@ const modules = [{
 }, 
 {
     title: 'จ่าย Coin',
-    to: '/coinApp/test',
+    to: '/coinApp/paycoins',
     icon: 'i-streamline-coin-share'
 },
 {
     title: 'โอน Coin',
-    to: '/coinApp/test',
+    to: '/coinApp/transferCoin',
     icon: 'i-streamline-coin-share'
 },
     // {
@@ -36,7 +36,8 @@ const modules = [{
                                class="font-medium leading-none text-gray-900 dark:text-white">
                             ยอด Coin ทั้งหมด</label>
             <label class="flex items-center gap-2 font-bold text-xl leading-none text-gray-900 dark:text-white">               
-                <UIcon name="i-ri-bit-coin-line" class="h-5 w-5 text-gray-800 dark:text-gray-400" /> 9,000
+                <!-- <UIcon name="i-ri-bit-coin-line" class="h-5 w-5 text-gray-800 dark:text-gray-400" />  -->
+                ₿ 9,000
             </label>
                         <!-- <p id="credit-card-text"
                            class="mt-1 text-xs font-normal text-gray-500 dark:text-gray-400"> Coin ทั้งหมดของคุณ</p> -->
