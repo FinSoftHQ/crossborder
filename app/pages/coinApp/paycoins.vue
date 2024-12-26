@@ -13,7 +13,7 @@
                 </h3>              
             </div>
             <div class="flex justify-center items-center">
-                        <NuxtLink to="/coinApp/successpay">
+                        <NuxtLink to="/coinApp/paycoins1">
                         <svg class="w-[250px] h-auto text-gray-500 dark:text-gray-400"
                              xmlns="http://www.w3.org/2000/svg"
                              width="24"

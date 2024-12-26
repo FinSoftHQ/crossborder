@@ -37,7 +37,7 @@ const modules = [{
                             ยอด Coin ทั้งหมด</label>
             <label class="flex items-center gap-2 font-bold text-xl leading-none text-gray-900 dark:text-white">               
                 <!-- <UIcon name="i-ri-bit-coin-line" class="h-5 w-5 text-gray-800 dark:text-gray-400" />  -->
-                ₿ 9,000
+                ₿ 9,000.00
             </label>
                         <!-- <p id="credit-card-text"
                            class="mt-1 text-xs font-normal text-gray-500 dark:text-gray-400"> Coin ทั้งหมดของคุณ</p> -->

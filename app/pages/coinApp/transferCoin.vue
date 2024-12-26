@@ -12,7 +12,7 @@
                 ยอด Coin ทั้งหมด
             </label>
             <label class="font-bold text-xl leading-none text-gray-900 dark:text-white">
-                ₿ 9,000
+                ₿ 9,000.00
             </label>
             <!-- <p id="credit-card-text" class="mt-1 text-xs font-normal text-gray-500 dark:text-gray-400"> Coin ทั้งหมดของคุณ</p> -->
         </div>
