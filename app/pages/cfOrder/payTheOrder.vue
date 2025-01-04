@@ -4,8 +4,8 @@ import { ref, computed, watch } from 'vue';
 const isModalOpen = ref(false);
 const termsAccepted = ref(false);
 const orderItems = ref([
-    { name: 'กระเป๋าเดินทาง 20', quantity: 1, price: '2,000', image: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/bag.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/bag.svg' },
-    { name: 'กระเป๋าเดินทาง 24', quantity: 1, price: '890', image: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/bag.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/bag.svg' },
+    { name: 'F001 กระเป๋าเดินทาง 20', quantity: 1, price: '₿ 2,000', image: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/bag.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/bag.svg' },
+    { name: 'C001 กระเป๋าเดินทาง 24', quantity: 1, price: '₿ 890', image: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/bag.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/bag.svg' },
 ]);
 const storeInfo = ref({
     name: 'Tech Store',
@@ -117,9 +117,9 @@ calculateTotal();
                             <UButton to="/coinApp/home"
                                      class="flex justify-center"
                                      color="white">ยกเลิก</UButton>
-                            <UButton to="/coinApp/successpay1"
+                            <UButton to="/cfOrder/orderSummary"
                             class="flex justify-center"
-                                     >ชำระเงิน</UButton>
+                                     >ยืนยัน</UButton>
                         </div>
         </section>
 

@@ -4,15 +4,21 @@ import { ref, computed, watch } from 'vue';
 const isModalOpen = ref(false);
 const termsAccepted = ref(false);
 const orderItems = ref([
-    { name: 'Apple iMac 27”', quantity: 1, price: 1499, image: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front-dark.svg' },
-    { name: 'Apple iPhone 14', quantity: 1, price: 1998, image: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg' },
+    { name: 'F001 กระเป๋าเดินทาง 20', quantity: 1, price: '₿ 2,000', image: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/bag.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/bag.svg' },
+    { name: 'C001 กระเป๋าเดินทาง 24', quantity: 1, price: '₿ 890', image: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/bag.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/bag.svg' },
 ]);
+const storeInfo = ref({
+    name: 'Tech Store',
+    address: '123 Tech Street, Silicon Valley, CA',
+    contact: '1-800-TECH',
+    email: 'support@techstore.com'
+});
 const orderSummary = ref({
-    originalPrice: '$2,397.00',
-    savings: '-$299.00',
-    storePickup: '$99',
-    tax: '$799',
-    total: '$2,996.00'
+    originalPrice: ' ₿ 2,000.00',
+    savings: '- ₿ 0.00',
+    storePickup: '₿ 0.00',
+    tax: ' ₿ 0.00',
+    total: 2996
 });
 
 const toggleModal = () => {
@@ -37,8 +43,8 @@ const returnToShopping = () => {
 };
 
 const calculateTotal = () => {
-    const total = orderItems.value.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    orderSummary.value.total = `$${total.toFixed(2)}`;
+    const total = orderItems.value.reduce((sum, item) => sum + parseFloat(item.price.replace('₿', '').replace(',', '')) * item.quantity, 0);
+    orderSummary.value.total = `₿ ${total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 };
 
 // Watch for changes in orderItems and recalculate the total
@@ -99,8 +105,7 @@ calculateTotal();
                                         <td class="p-4 text-base font-normal text-gray-900 dark:text-white">{{
                                             item.quantity
                                         }}</td>
-                                        <td class="p-4 text-right text-base font-bold text-gray-900 dark:text-white">{{
-                                            `$${(item.price * item.quantity).toFixed(2)}` }}</td>
+                                        <td class="p-4 text-right text-base font-bold text-gray-900 dark:text-white">{{item.price }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -258,17 +263,16 @@ calculateTotal();
                                     Conditions</a> of use of the Flowbite marketplace
                             </label>
                         </div> -->
+                           
+                            <div class="grid grid-cols-2 gap-4 mt-4">
+                            <UButton to="/cfOrder/payTheOrder"
+                                     class="flex justify-center"
+                                     color="white">ยกเลิก</UButton>
+                            <UButton to="/cfOrder/payment"
+                            class="flex justify-center"
+                                     >ยืนยัน</UButton>
+                        </div>
 
-                            <div class="grid grid-cols-2 gap-4">
-                                <UButton to="/ecommerce/products"
-                                         class="flex w-full items-center justify-center rounded-lg  border border-gray-200 bg-white px-5  py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">
-                                    กลับไปยังหน้าสินค้า
-                                </UButton>
-                                <UButton to="/ecommerce/payment"
-                                         class="flex w-full items-center justify-center rounded-lg bg-primary-700  px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300  dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:mt-0">
-                                    สั่งสินค้า
-                                </UButton>
-                            </div>
                         </div>
                     </div>
                 </div>
