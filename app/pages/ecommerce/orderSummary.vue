@@ -101,7 +101,7 @@ calculateTotal();
                                             item.quantity
                                         }}</td>
                                         <td class="p-4 text-right text-base font-bold text-gray-900 dark:text-white">{{
-                                            `₿ ${(item.price * item.quantity).toFixed(2)}` }}</td>
+                                            `₿ ${(item.price * item.quantity).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}` }}</td>
                                     </tr>
                                 </tbody>
                             </table>
