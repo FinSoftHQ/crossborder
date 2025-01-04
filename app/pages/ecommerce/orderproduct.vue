@@ -180,7 +180,7 @@ const totalPrice = computed(() => {
                                             </button>
                                         </div>
                                         <div class="text-end md:order-4 md:w-32">
-                                            <p class="text-base font-bold text-gray-900 dark:text-white">${{ product.price *
+                                            <p class="text-base font-bold text-gray-900 dark:text-white">₿ {{ product.price *
                                                 product.quantity }}</p>
                                         </div>
                                     </div>
@@ -241,30 +241,30 @@ const totalPrice = computed(() => {
                                     <dl class="flex items-center justify-between gap-4">
                                         <dt class="text-base font-normal text-gray-500 dark:text-gray-400">รายการสั่งสินค้า
                                         </dt>
-                                        <dd class="text-base font-medium text-gray-900 dark:text-white">${{ totalPrice }}
+                                        <dd class="text-base font-medium text-gray-900 dark:text-white">₿ {{ totalPrice }}
                                         </dd>
                                     </dl>
     
                                     <dl class="flex items-center justify-between gap-4">
                                         <dt class="text-base font-normal text-gray-500 dark:text-gray-400">ส่วนลด</dt>
-                                        <dd class="text-base font-medium text-green-600">-$299.00</dd>
+                                        <dd class="text-base font-medium text-green-600">-₿ 299.00</dd>
                                     </dl>
     
                                     <dl class="flex items-center justify-between gap-4">
                                         <dt class="text-base font-normal text-gray-500 dark:text-gray-400">การจัดส่ง</dt>
-                                        <dd class="text-base font-medium text-gray-900 dark:text-white">$99</dd>
+                                        <dd class="text-base font-medium text-gray-900 dark:text-white">₿ 99</dd>
                                     </dl>
     
                                     <dl class="flex items-center justify-between gap-4">
                                         <dt class="text-base font-normal text-gray-500 dark:text-gray-400">Tax</dt>
-                                        <dd class="text-base font-medium text-gray-900 dark:text-white">$799</dd>
+                                        <dd class="text-base font-medium text-gray-900 dark:text-white">₿ 799</dd>
                                     </dl>
                                 </div>
     
                                 <dl
                                     class="flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700">
                                     <dt class="text-base font-bold text-gray-900 dark:text-white">ยอดรวมทั้งหมด</dt>
-                                    <dd class="text-base font-bold text-gray-900 dark:text-white">${{ totalPrice.toLocaleString() }}</dd>
+                                    <dd class="text-base font-bold text-gray-900 dark:text-white">₿ {{ totalPrice.toLocaleString() }}</dd>
 
                                
                                 </dl>

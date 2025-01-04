@@ -8,11 +8,11 @@ const orderItems = ref([
     { name: 'Apple iPhone 14', quantity: 1, price: 1998, image: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg' },
 ]);
 const orderSummary = ref({
-    originalPrice: '$2,397.00',
-    savings: '-$299.00',
-    storePickup: '$99',
-    tax: '$799',
-    total: '$2,996.00'
+    originalPrice: '₿ 2,397.00',
+    savings: '₿ 299.00',
+    storePickup: '₿ 99',
+    tax: '₿  799',
+    total: '₿ 2,996.00'
 });
 
 const toggleModal = () => {
@@ -38,8 +38,9 @@ const returnToShopping = () => {
 
 const calculateTotal = () => {
     const total = orderItems.value.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    orderSummary.value.total = `$${total.toFixed(2)}`;
+    orderSummary.value.total = `₿${total.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
 };
+
 
 // Watch for changes in orderItems and recalculate the total
 watch(orderItems, calculateTotal, { deep: true });
@@ -100,7 +101,7 @@ calculateTotal();
                                             item.quantity
                                         }}</td>
                                         <td class="p-4 text-right text-base font-bold text-gray-900 dark:text-white">{{
-                                            `$${(item.price * item.quantity).toFixed(2)}` }}</td>
+                                            `₿ ${(item.price * item.quantity).toFixed(2)}` }}</td>
                                     </tr>
                                 </tbody>
                             </table>
