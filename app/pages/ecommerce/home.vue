@@ -46,7 +46,7 @@ const categories = ref([
         id: 2,
         name: 'นวัตกรรมสินค้ากรีนโปรดักส์',
         iconUrl: 'https://example.com/icons/green-products.png',
-        link: '/ecommerce/green-products',
+        link: '/ecommerce/greenProducts',
     },
     {
         id: 3,
@@ -58,7 +58,7 @@ const categories = ref([
         id: 4,
         name: 'ศูนย์การเรียนรู้พัฒนาธุรกิจและเทคโนโลยี',
         iconUrl: 'https://example.com/icons/business-tech.png',
-        link: '/ecommerce/business-tech',
+        link: '/ecommerce/businessTech',
     },
     {
         id: 5,
