@@ -1,53 +1,4 @@
-<script setup lang="ts">
-import { ref, computed, watch } from 'vue';
 
-const isModalOpen = ref(false);
-const termsAccepted = ref(false);
-const orderItems = ref([
-    { name: 'Apple iMac 27”', quantity: 1, price: 1499, image: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front-dark.svg' },
-    { name: 'Apple iPhone 14', quantity: 1, price: 1998, image: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg' },
-]);
-const orderSummary = ref({
-    originalPrice: '₿ 2,397.00',
-    savings: '₿ 299.00',
-    storePickup: '₿ 99',
-    tax: '₿  799',
-    total: '₿ 2,996.00'
-});
-
-const toggleModal = () => {
-    isModalOpen.value = !isModalOpen.value;
-};
-
-const submitOrder = () => {
-    if (termsAccepted.value) {
-        alert('Order submitted successfully!');
-    } else {
-        alert('Please accept the terms and conditions.');
-    }
-};
-
-const saveBillingInformation = () => {
-    alert('Billing information saved successfully!');
-    toggleModal();
-};
-
-const returnToShopping = () => {
-    alert('Returning to shopping...');
-};
-
-const calculateTotal = () => {
-    const total = orderItems.value.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    orderSummary.value.total = `₿${total.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
-};
-
-
-// Watch for changes in orderItems and recalculate the total
-watch(orderItems, calculateTotal, { deep: true });
-
-// Initial calculation
-calculateTotal();
-</script>
 <template>
     <UContainer>
         <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
@@ -321,7 +272,56 @@ calculateTotal();
     </UContainer>
 
 </template>
+<script setup lang="ts">
+import { ref, computed, watch } from 'vue';
 
+const isModalOpen = ref(false);
+const termsAccepted = ref(false);
+const orderItems = ref([
+    { name: 'Apple iMac 27”', quantity: 1, price: 1499, image: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front-dark.svg' },
+    { name: 'Apple iPhone 14', quantity: 1, price: 1998, image: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg', imageDark: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg' },
+]);
+const orderSummary = ref({
+    originalPrice: '₿ 2,397.00',
+    savings: '₿ 299.00',
+    storePickup: '₿ 99',
+    tax: '₿  799',
+    total: '₿ 2,996.00'
+});
+
+const toggleModal = () => {
+    isModalOpen.value = !isModalOpen.value;
+};
+
+const submitOrder = () => {
+    if (termsAccepted.value) {
+        alert('Order submitted successfully!');
+    } else {
+        alert('Please accept the terms and conditions.');
+    }
+};
+
+const saveBillingInformation = () => {
+    alert('Billing information saved successfully!');
+    toggleModal();
+};
+
+const returnToShopping = () => {
+    alert('Returning to shopping...');
+};
+
+const calculateTotal = () => {
+    const total = orderItems.value.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    orderSummary.value.total = `₿${total.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
+};
+
+
+// Watch for changes in orderItems and recalculate the total
+watch(orderItems, calculateTotal, { deep: true });
+
+// Initial calculation
+calculateTotal();
+</script>
 <style scoped>
 /* Add any additional styles here */
 </style>
