@@ -1,10 +1,10 @@
 <template>
     <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
-        <div class="mx-auto max-w-3xl">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-3xl">
-                <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">กรอกข้อมูลสินค้า</h2>
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">ลงขายสินค้า</h2>
                 <div class="mt-6 space-y-4 border-b border-t border-gray-200 py-8 dark:border-gray-700 sm:mt-8">
-                    <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white"></h2>
+                    <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">กรอกข้อมูลสินค้า</h2>
                     <form action="#">
                         <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                             <!-- Store/Farm/Location Name -->
@@ -28,9 +28,9 @@
                             <div class="sm:col-span-2">
                                 <label for="product-image"
                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เพิ่มรูปสินค้า</label>
-                                <div class="flex items-start justify-start w-full">
+                                <div class="flex items-start justify-start sm:justify-start w-full">
                                     <label for="product-image"
-                                           class="flex flex-col items-center justify-center w-[250px] h-[250px] border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                                           class="flex flex-col items-center justify-center w-full max-w-xs h-[250px] border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                                         <div class="flex flex-col items-center justify-center pt-5 pb-6">
                                             <svg aria-hidden="true"
                                                  class="w-10 h-10 mb-3 text-gray-400"
@@ -41,7 +41,7 @@
                                                 <path stroke-linecap="round"
                                                       stroke-linejoin="round"
                                                       stroke-width="2"
-                                                      d="M7 16l-4-4m0 0l4-4m-4 4h18M3 12h18"></path>
+                                                      d="M12 16v-4m0 0V8m0 4h4m-4 0H8m12 4v4H4v-4m16 0l-4-4m0 0l-4 4m4-4H8"></path>
                                             </svg>
                                             <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span
                                                       class="font-semibold">คลิกเพื่ออัปโหลด</span>
@@ -85,8 +85,8 @@
                                     <option value="อาหารเสริม">อาหารเสริม</option>
                                 </select>
                             </div>
-  <!-- Quantity -->
-  <div class="sm:col-span-2">
+                            <!-- Quantity -->
+                            <div class="sm:col-span-2">
                                 <label for="item-weight"
                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">จำนวนสินค้า</label>
                                 <div class="flex flex-col gap-4">
@@ -137,23 +137,11 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- Quantity -->
-                            <div class="sm:col-span-2">
-                                <label for="item-weight"
-                                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">จำนวนสินค้า
-                                    (ก.ม)</label>
-                                <input type="number"
-                                       name="item-weight"
-                                       id="item-weight"
-                                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                       placeholder="กรอกจำนวนสินค้า"
-                                       required="">
-                            </div>
                         </div>
-                        <button type="submit"
-                                class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
-                            บันทึกข้อมูล
-                        </button>
+                            <button type="button"
+                                    class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+                                บันทึกข้อมูล
+                            </button>
                     </form>
                 </div>
             </div>
