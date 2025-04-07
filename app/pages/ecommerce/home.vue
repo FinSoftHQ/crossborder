@@ -17,9 +17,7 @@
                        :href="category.link"
                        class="relative overflow-hidden rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-800 text-center p-4 hover:bg-gray-100 dark:hover:bg-gray-700 transition">
                         <div class="flex justify-center mb-4">
-                            <img :src="category.iconUrl"
-                                 :alt="category.name"
-                                 class="h-12 w-12">
+                            <UIcon :name="category.iconUrl" class="w-16 h-16 text-gray-500 dark:text-gray-400" />
                         </div>
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                             {{ category.name }}
@@ -39,31 +37,31 @@ const categories = ref([
     {
         id: 1,
         name: 'เทคโนโลยีเพื่อสุขภาพ การก่อสร้าง และวัสดุเทคโนโลยีด้านวิศวกรรม',
-        iconUrl: 'https://example.com/icons/health-tech.png',
+        iconUrl: 'i-mdi-health-potion',
         link: '/ecommerce/healthTech',
     },
     {
         id: 2,
         name: 'นวัตกรรมสินค้ากรีนโปรดักส์',
-        iconUrl: 'https://example.com/icons/green-products.png',
+        iconUrl: 'i-mdi-leaf',
         link: '/ecommerce/greenProducts',
     },
     {
         id: 3,
         name: 'การสื่อสาร การตลาด การท่องเที่ยว และศิลปวัฒนธรรม',
-        iconUrl: 'https://example.com/icons/communication.png',
+        iconUrl: 'i-mdi-person-group',
         link: '/ecommerce/communication',
     },
     {
         id: 4,
         name: 'ศูนย์การเรียนรู้พัฒนาธุรกิจและเทคโนโลยี',
-        iconUrl: 'https://example.com/icons/business-tech.png',
+        iconUrl: 'i-mdi-book-open-page-variant',
         link: '/ecommerce/businessTech',
     },
     {
         id: 5,
         name: 'นวัตกรรมการเงิน การลงทุนและการจัดการความเสี่ยงธุรกิจ',
-        iconUrl: 'https://example.com/icons/finance.png',
+        iconUrl: 'i-mdi-finance',
         link: '/ecommerce/finance',
     },
 ]);

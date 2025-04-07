@@ -81,22 +81,22 @@ const products = [
     {
         title: "การบริหารจัดการธุรกิจ",
         description: "การจัดการองค์กรและธุรกิจอย่างมีประสิทธิภาพ",
-        image: "https://via.placeholder.com/150",
+        image: "https://1stcraft.com/wp-content/uploads/2020/05/20200523_1SC_ArticleCover.jpg",
     },
     {
         title: "เมตาเวิร์ส (Metaverse)",
         description: "เทคโนโลยีโลกเสมือนจริงเพื่อการพัฒนาธุรกิจ",
-        image: "https://via.placeholder.com/150",
+        image: "https://www.nstda.or.th/sci2pub/wp-content/uploads/2022/09/Metaverse.jpg",
     },
     {
         title: "บิ๊กดาต้า (Big Data)",
         description: "การให้บริการข้อมูลขนาดใหญ่เพื่อการตัดสินใจ",
-        image: "https://via.placeholder.com/150",
+        image: "https://digitalmarketingwow.com/wp-content/uploads/2017/06/Big-Data-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-001.jpg",
     },
     {
         title: "การพัฒนาธุรกิจและผู้ประกอบการ",
         description: "การสร้างต้นแบบและพัฒนาผู้ประกอบการ",
-        image: "https://via.placeholder.com/150",
+        image: "https://storage.googleapis.com/techsauce-prod/ugc/uploads/2023/2/1676376902_1200X800_13_%E0%B9%80%E0%B8%84%E0%B8%A5%E0%B9%87%E0%B8%94%E0%B8%A5%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%AD%E0%B8%9A%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%9A%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%A3%E0%B9%87%E0%B8%88_.jpg",
     },
 ];
 
@@ -187,3 +187,4 @@ const products2 = ref([
     },
 ]);
 </script>
+

@@ -4,7 +4,7 @@
             <div class="max-w-xl mx-auto text-center">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
                 นวัตกรรมการเงิน การลงทุนและการจัดการความเสี่ยงธุรกิจ
-            </h2>          
+            </h2>
             </div>
 
             <div class="grid grid-cols-1 gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -32,52 +32,52 @@ const products = [
     {
         title: "นวัตกรรมการเงิน การบัญชี ภาษี ไฟแนนซ์",
         description: "การพัฒนาระบบการเงินและการจัดการบัญชีที่ทันสมัย",
-        image: "https://via.placeholder.com/150",
+        image: "https://www.exim.go.th/eximinter/e-news/20341/image/finance/chart-1.jpg",
     },
     {
         title: "นวัตกรรมประกันภัย และบริหารความเสี่ยง",
         description: "การจัดการความเสี่ยงและการประกันภัยที่มีประสิทธิภาพ",
-        image: "https://via.placeholder.com/150",
+        image: "https://tiins.com/wp-content/uploads/2019/10/performance-management-1030x412.png",
     },
     {
         title: "นวัตกรรมกางกฏหมาย และคดีความ",
         description: "การใช้เทคโนโลยีเพื่อการจัดการกฎหมายและคดีความ",
-        image: "https://via.placeholder.com/150",
+        image: "https://tiins.com/wp-content/uploads/2019/10/checklist-management-1-1030x412.png",
     },
     {
         title: "ณ เลย ฟินเทค",
         description: "การพัฒนาเทคโนโลยีทางการเงินเพื่อธุรกิจ",
-        image: "https://via.placeholder.com/150",
+        image: "https://tiins.com/wp-content/uploads/2019/10/objectives-of-performance-management.png",
     },
     {
         title: "การจัดการสินทรัพย์/หนี้สิน",
         description: "การบริหารสินทรัพย์และหนี้สินอย่างมีประสิทธิภาพ",
-        image: "https://via.placeholder.com/150",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3l7Vd2s-DQQ34x-gybwq8NYcFIXsKCxA4wHtSQXsqsc86xrTCqTkWo4vdDoqmZGPvXFs&usqp=CAU",
     },
     {
         title: "การจัดการนิติบุคคล",
         description: "การบริหารจัดการนิติบุคคลและองค์กร",
-        image: "https://via.placeholder.com/150",
+        image: "https://www.smarttoinvest.com/PublishingImages/Pages/InvestmentProduct/KnowInvestment/Insurance/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3.png",
     },
     {
         title: "บริการซื้อ-เช่าสินทรัพย์ แก้ปรับโครงสร้างและซื้อ-ขายธุรกิจ",
         description: "บริการที่ครอบคลุมการจัดการสินทรัพย์และธุรกิจ",
-        image: "https://via.placeholder.com/150",
+        image: "https://sim239.com/berded/289_1.png",
     },
     {
         title: "การจัดการธุรกิจที่ยั่งยืน",
         description: "การพัฒนาธุรกิจที่เป็นมิตรต่อสิ่งแวดล้อมและยั่งยืน",
-        image: "https://via.placeholder.com/150",
+        image: "https://thaipublica.org/wp-content/uploads/2020/04/%E0%B8%87%E0%B8%9A%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%87%E0%B8%B4%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%81%E0%B8%9A%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4-02_thaipublica-scaled-e1587552294231.jpg",
     },
     {
         title: "กองทุน สหกรณ์ มูลนิธิ",
         description: "การบริหารจัดการกองทุน สหกรณ์ และมูลนิธิ",
-        image: "https://via.placeholder.com/150",
+        image: "https://promotions.co.th/wp-content/uploads/2023/08/what-is-financial-liquidity.jpg",
     },
     {
         title: "สถาบันการเงิน",
         description: "การพัฒนาสถาบันการเงินเพื่อการเติบโตทางเศรษฐกิจ",
-        image: "https://via.placeholder.com/150",
+        image: "https://www.myaccount-cloud.com/upload/8567/ssyf8GJKV2.jpg",
     },
 ];
 </script>

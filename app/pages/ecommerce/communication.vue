@@ -49,22 +49,22 @@ const products = ref([
   {
     title: 'บริการ รับปรึกษา และสร้าง Innovation Marketing ด้วย Strategic Wisdom',
     description: 'Free Consultation',
-    image: 'https://example.com/innovation-marketing-light.svg',
+    image: '/images/i1.jpg',
   },
   {
     title: 'นวัตกรรมเวลเนส การท่องเที่ยว และศิลปวัฒนธรรม',
     description: 'Free Consultation',
-    image: 'https://example.com/wellness-tourism-light.svg',
+    image: '/images/i2.png',
   },
   {
     title: 'นวัตกรรมตลาดวิชาชีพ',
     description: 'Free Consultation',
-    image: 'https://example.com/professional-market-light.svg',
+    image: '/images/i4.jpg',
   },
   {
     title: 'นวัตกรรมการเรียนรู้จากถิ่นอริยะสงค์',
     description: 'Free Consultation',
-    image: 'https://example.com/learning-innovation-light.svg',
+    image: '/images/i3.png',
   },
 ]);
 
