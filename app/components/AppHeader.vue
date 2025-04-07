@@ -4,14 +4,17 @@ import type { NavItem } from '@nuxt/content'
 const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
 
 const links = [{
-  label: 'Docs',
-  to: '/docs'
+  label: 'สินค้าและบริการทั้งหมด',
+  to: '/ecommerce/home'
 }, {
-  label: 'Pricing',
-  to: '/pricing'
+  label: 'ลงขายสินค้า',
+  to: '/ecommerce/registerProduct'
 }, {
-  label: 'Blog',
-  to: '/blog'
+  label: 'สินค้าที่ลงทะเบียน',
+  to: '/ecommerce/productPreView'
+},{
+  label: 'คลังสินค้า',
+  to: '/ecommerce/stock'
 }]
 </script>
 
