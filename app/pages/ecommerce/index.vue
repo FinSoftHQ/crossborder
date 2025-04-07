@@ -46,14 +46,14 @@ const categories = ref([
         name: 'Electronics',
         description: 'Discover the latest in electronic devices and gadgets.',
         imageUrl: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/category-electronics.jpg',
-        link: '/ecommerce/electronics',
+        link: '/',
     },
     {
         id: 2,
         name: 'Fashion',
         description: 'Stay trendy with the latest fashion collections.',
         imageUrl: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/category-fashion.jpg',
-        link: '/ecommerce/fashion',
+        link: '/',
     },
     {
         id: 3,
@@ -67,21 +67,21 @@ const categories = ref([
         name: 'Sports & Outdoors',
         description: 'Gear up for your next adventure with our sports equipment.',
         imageUrl: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/category-sports.jpg',
-        link: '/ecommerce/sports',
+        link: '/',
     },
     {
         id: 5,
         name: 'Beauty & Health',
         description: 'Explore our beauty and health products for your wellness.',
         imageUrl: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/category-beauty.jpg',
-        link: '/ecommerce/beauty',
+        link: '/',
     },
     {
         id: 6,
         name: 'Toys & Games',
         description: 'Find the perfect toys and games for kids of all ages.',
         imageUrl: 'https://flowbite.s3.amazonaws.com/blocks/e-commerce/category-toys.jpg',
-        link: '/ecommerce/toys',
+        link: '/',
     },
 ]);
 </script>
