@@ -1,4 +1,3 @@
-
 <template>
     <UContainer>
         <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
@@ -15,7 +14,7 @@
                             <dd class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">
                                 Lao PDR, Vientiane, 1234, Lane Xang Avenue
                             </dd>
-                        <br />
+                            <br />
                         </dl>
 
                         <button type="button"
@@ -50,9 +49,10 @@
                                         </td>
                                         <td class="p-4 text-base font-normal text-gray-900 dark:text-white">{{
                                             item.quantity
-                                        }}</td>
+                                            }}</td>
                                         <td class="p-4 text-right text-base font-bold text-gray-900 dark:text-white">{{
-                                            `₿ ${(item.price * item.quantity).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}` }}</td>
+                                            `₿ ${(item.price *
+                                                item.quantity).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}` }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -78,7 +78,7 @@
                                         <div class="ms-4 text-sm">
                                             <label for="credit-card"
                                                    class="font-medium leading-none text-gray-900 dark:text-white">
-                                                   KGO Coin</label>
+                                                arada Coin</label>
                                             <p id="credit-card-text"
                                                class="mt-1 text-xs font-normal text-gray-500 dark:text-gray-400">จ่าย
                                                 ด้วยเหรียญในกระเป๋าของคุณ</p>
@@ -113,7 +113,8 @@
                                                    class="font-medium leading-none text-gray-900 dark:text-white">
                                                 ธนาคาร </label>
                                             <p id="pay-on-delivery-text"
-                                               class="mt-1 text-xs font-normal text-gray-500 dark:text-gray-400">ชำระผ่านแอปพลิเคชันธนาคาร</p>
+                                               class="mt-1 text-xs font-normal text-gray-500 dark:text-gray-400">
+                                                ชำระผ่านแอปพลิเคชันธนาคาร</p>
                                         </div>
                                     </div>
 
@@ -136,7 +137,8 @@
                                                    class="font-medium leading-none text-gray-900 dark:text-white">
                                                 QR Promptpay </label>
                                             <p id="paypal-text"
-                                               class="mt-1 text-xs font-normal text-gray-500 dark:text-gray-400">ชำระเงินด้วยการสแกน QR Code</p>
+                                               class="mt-1 text-xs font-normal text-gray-500 dark:text-gray-400">
+                                                ชำระเงินด้วยการสแกน QR Code</p>
                                         </div>
                                     </div>
 
@@ -185,7 +187,7 @@
                                         <dt class="text-gray-500 dark:text-gray-400">Tax</dt>
                                         <dd class="text-base font-medium text-gray-900 dark:text-white">{{
                                             orderSummary.tax
-                                        }}</dd>
+                                            }}</dd>
                                     </dl>
                                 </div>
 
