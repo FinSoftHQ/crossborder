@@ -12,7 +12,7 @@ const links = [{
 }, {
   label: 'สินค้าที่ลงทะเบียน',
   to: '/ecommerce/productPreView'
-},{
+}, {
   label: 'คลังสินค้า',
   to: '/ecommerce/stock'
 }]
