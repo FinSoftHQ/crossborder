@@ -3,7 +3,7 @@
         <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
             <div class="mx-auto max-w-5xl">
                 <div class="gap-4 lg:flex lg:items-center lg:justify-between">
-                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">คลังสินค้า</h2>                       
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">คลังสินค้า</h2>
                 </div>
                 <!-- Card Section -->
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5 mb-8">
@@ -17,24 +17,26 @@
                 </div>
                 <div class="mt-6 flow-root sm:mt-8">
                     <div class="gap-4 lg:flex lg:items-center lg:justify-end">
-                    <div class="mt-6 gap-4 space-y-4 sm:flex sm:items-center sm:space-y-0 lg:mt-0 lg:justify-end">
-                        <div>
-                            <label for="category-filter"
-                                   class="sr-only mb-2 block text-sm font-medium text-gray-900 dark:text-white">กรองตามประเภท</label>
-                            <select id="category-filter"
-                                    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 sm:w-[144px]">
-                                <option selected>ทุกประเภท</option>
-                                <option value="fresh-dry">สด / แห้ง</option>
-                                <option value="powder">ผง</option>
-                                <option value="extract">สารสกัด</option>
-                                <option value="green-product">ผลิตภัณฑ์ green product (ของกิน ของใช้)</option>
-                                <option value="supplement">อาหารเสริม</option>
-                            </select>
+                        <div class="mt-6 gap-4 space-y-4 sm:flex sm:items-center sm:space-y-0 lg:mt-0 lg:justify-end">
+                            <div>
+                                <label for="category-filter"
+                                       class="sr-only mb-2 block text-sm font-medium text-gray-900 dark:text-white">กรองตามประเภท</label>
+                                <select id="category-filter"
+                                        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 sm:w-[144px]">
+                                    <option selected>ทุกประเภท</option>
+                                    <option value="fresh-dry">สด / แห้ง</option>
+                                    <option value="powder">ผง</option>
+                                    <option value="extract">สารสกัด</option>
+                                    <option value="green-product">ผลิตภัณฑ์ green product (ของกิน ของใช้)</option>
+                                    <option value="supplement">อาหารเสริม</option>
+                                </select>
+                            </div>
+                            <NuxtLink to="/ecommerce/productPreView2">
+                                <button type="button"
+                                        class="w-full rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-auto">เพิ่มสินค้า</button>
+                            </NuxtLink>
                         </div>
-                        <button type="button"
-                                class="w-full rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-auto">เพิ่มสินค้า</button>
                     </div>
-                </div>
                     <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
                         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                             <thead
@@ -152,7 +154,7 @@ interface Product {
 const products = ref<Product[]>([
     // สด / แห้ง
     { id: 1, name: "Apple", category: "สด / แห้ง", quantity: 50, image: "https://home.maefahluang.org/images/editor/apple.jpg", stores: 10 },
-    { id: 2, name: "Banana", category: "สด / แห้ง", quantity: 30, image: "https://www.healthxchange.sg/sites/hexassets/Assets/food-nutrition/good-reasons-to-eat-a-banana-today.jpg", stores: 8 },
+    { id: 2, name: "Banana", category: "สด / แห้ง", quantity: 30, image: "https://fit-d.com/uploads/food/5f6c8c69a8f190b979f93f02475aac80.jpg", stores: 8 },
     { id: 3, name: "Cherry", category: "สด / แห้ง", quantity: 100, image: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Cherry_season_%2848216568227%29.jpg", stores: 12 },
 
     // ผง
