@@ -7,14 +7,17 @@ const links = [{
   label: 'สินค้าและบริการทั้งหมด',
   to: '/ecommerce/home'
 }, {
+  label: 'คลังสินค้า',
+  to: '/ecommerce/stock'
+}, {
+  label: 'ตลาดซื้อขาย',
+  to: '/ecommerce/productPreView2'
+}, {
   label: 'ลงขายสินค้า',
   to: '/ecommerce/registerProduct'
 }, {
-  label: 'สินค้าที่ลงทะเบียน',
+  label: 'สินค้าที่สวนลงขาย',
   to: '/ecommerce/productPreView'
-}, {
-  label: 'คลังสินค้า',
-  to: '/ecommerce/stock'
 }]
 </script>
 
