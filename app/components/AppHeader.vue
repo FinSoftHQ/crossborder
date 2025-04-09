@@ -4,63 +4,86 @@ import type { NavItem } from '@nuxt/content'
 const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
 
 const links = [{
-  label: 'สินค้าและบริการทั้งหมด',
-  to: '/ecommerce/home'
+  label: 'NaLoei',
+  to: '/ecommerce/home',
+  children: [{
+    label: 'สินค้าและบริการทั้งหมด',
+    to: '/ecommerce/home',
+  }, {
+    label: 'คลังสินค้า NaLoei',
+    to: '/ecommerce/stock',
+  }, {
+    label: 'ตลาดซื้อขาย',
+    to: '/ecommerce/productPreView2',
+  }, {
+    label: 'บริการอื่น ๆ',
+    to: '/NaLoeiWeb/home'
+  }]
 }, {
-  label: 'คลังสินค้า',
-  to: '/ecommerce/stock'
+  label: 'สวนผู้ขาย',
+  to: '/ecommerce/productPreView',
+  children: [{
+    label: 'สินค้าที่สวนลงขาย',
+    to: '/ecommerce/productPreView',
+  }, {
+    label: 'ลงขายสินค้า',
+    to: '/ecommerce/registerProduct',
+  }]
 }, {
-  label: 'ตลาดซื้อขาย',
-  to: '/ecommerce/productPreView2'
+  label: 'โรงแรม',
+  to: '/hotel/back/hotelReport',
+  children: [
+    {
+      label: 'ติดต่อบริการ',
+      to: '/hotel/naloei/hotelSale'
+    }, {
+      label: 'จัดการห้องพัก',
+      to: '/hotel/back/hotelReport',
+    }, {
+      label: 'ลงทะเบียนห้องพัก',
+      to: '/hotel/back/hotelRegister',
+    }]
 }, {
-  label: 'ลงขายสินค้า',
-  to: '/ecommerce/registerProduct'
-}, {
-  label: 'สินค้าที่สวนลงขาย',
-  to: '/ecommerce/productPreView'
-}, {
-  label: 'จัดการโรงแรม',
-  to: '/hotel/back/hotelReport'
-}, {
-  label: 'บริการ',
-  to: '/NaLoeiWeb/home'
-}, {
-  label: 'ติดต่อบริการ',
-  to: '/hotel/naloei/hotelSale'
+  label: 'รถให้เช่า',
+  to: '/NaLoeiWeb/carBooking',
+  children: [
+    {
+      label: 'รถให้เช่า',
+      to: '/NaLoeiWeb/carBooking',
+    }, {
+      label: 'จัดการรถให้เช่า',
+      to: '/car/back/carReport',
+    }, {
+      label: 'ลงทะเบียนรถให้เช่า',
+      to: '/hotel/back/hotelRegister',
+    }]
 }]
 </script>
 
 <template>
   <UHeader :links="links">
     <template #logo>
-      Nuxt UI Pro <UBadge
-        label="SaaS"
-        variant="subtle"
-        class="mb-0.5"
-      />
+      Nuxt UI Pro
+      <UBadge label="SaaS"
+              variant="subtle"
+              class="mb-0.5" />
     </template>
 
     <template #right>
-      <UButton
-        label="Sign in"
-        color="gray"
-        to="/login"
-      />
-      <UButton
-        label="Sign up"
-        icon="i-heroicons-arrow-right-20-solid"
-        trailing
-        color="black"
-        to="/signup"
-        class="hidden lg:flex"
-      />
+      <UButton label="Sign in"
+               color="gray"
+               to="/login" />
+      <UButton label="Sign up"
+               icon="i-heroicons-arrow-right-20-solid"
+               trailing
+               color="black"
+               to="/signup"
+               class="hidden lg:flex" />
     </template>
 
     <template #panel>
-      <UNavigationTree
-        :links="mapContentNavigation(navigation)"
-        default-open
-      />
+      <UNavigationTree :links="mapContentNavigation(navigation)"
+                       default-open />
     </template>
   </UHeader>
 </template>

@@ -9,7 +9,7 @@
                              aria-label="Breadcrumb">
                         </nav>
                         <h2 class="mt-3 text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
-                            ห้องพักที่ว่าง
+                            ห้องพักที่พร้อมจอง
                         </h2>
                     </div>
                 </div>
@@ -21,19 +21,20 @@
                             <a href="#">
                                 <img :src="room.imageUrl"
                                      class="mx-auto h-full dark:hidden"
-                                     :alt="room.type" />
+                                     :alt="room.name" />
                                 <img :src="room.darkImageUrl"
                                      class="mx-auto hidden h-full dark:block"
-                                     :alt="room.type" />
+                                     :alt="room.name" />
                             </a>
                         </div>
                         <div class="pt-6">
                             <a href="#"
                                class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">{{
                                 room.type }}</a>
+                            <p class="text-sm font-medium text-gray-500 dark:text-gray-400">{{ room.hotelName }}</p>
                             <div class="mt-2 flex items-center gap-2">
                                 <p class="text-sm font-medium text-gray-900 dark:text-white">{{ room.capacity }}</p>
-                                <!-- <p class="text-sm font-medium text-gray-500 dark:text-gray-400">({{ room.name }})
+                                <!-- <p class="text-sm font-medium text-gray-500 dark:text-gray-400">({{ room.type }})
                                 </p> -->
                             </div>
                         </div>
@@ -42,7 +43,7 @@
                                 room.pricePerNight }}</p>
                             <UButton to="/booking/reserveroom"
                                      class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                                จองห้องพัก
+                                เลือกห้องพัก
                             </UButton>
                         </div>
                     </div>
@@ -69,6 +70,7 @@ const rooms = ref([
         capacity: '2 Adults',
         imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Double.png',
         available: true,
+        hotelName: 'Hilton',
     },
     {
         id: 2,
@@ -78,6 +80,7 @@ const rooms = ref([
         capacity: '2 Adults',
         imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Queen-size.png',
         available: false,
+        hotelName: 'Marriott',
     },
     {
         id: 3,
@@ -87,6 +90,7 @@ const rooms = ref([
         capacity: '1 Adult',
         imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Single.png',
         available: true,
+        hotelName: 'Hilton',
     },
     {
         id: 4,
@@ -96,6 +100,7 @@ const rooms = ref([
         capacity: '2 Adults',
         imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Twin.png',
         available: false,
+        hotelName: 'Marriott',
     },
     {
         id: 5,
@@ -105,6 +110,7 @@ const rooms = ref([
         capacity: '2 Adults',
         imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Double.png',
         available: true,
+        hotelName: 'Hilton',
     },
 ]);
 </script>
