@@ -188,17 +188,16 @@
                                         <dd class="text-base font-medium text-green-500">{{ orderSummary.savings }}</dd>
                                     </dl>
 
-                                    <dl class="flex items-center justify-between gap-4">
+                                    <!-- Removed shipping cost -->
+                                    <!-- <dl class="flex items-center justify-between gap-4">
                                         <dt class="text-gray-500 dark:text-gray-400">การจัดส่ง</dt>
-                                        <dd class="text-base font-medium text-gray-900 dark:text-white">{{
-                                            orderSummary.storePickup }}</dd>
-                                    </dl>
+                                        <dd class="text-base font-medium text-gray-900 dark:text-white">{{ orderSummary.storePickup }}</dd>
+                                    </dl> -->
 
                                     <dl class="flex items-center justify-between gap-4">
                                         <dt class="text-gray-500 dark:text-gray-400">Tax</dt>
                                         <dd class="text-base font-medium text-gray-900 dark:text-white">{{
-                                            orderSummary.tax
-                                            }}</dd>
+                                            orderSummary.tax }}</dd>
                                     </dl>
                                 </div>
 
