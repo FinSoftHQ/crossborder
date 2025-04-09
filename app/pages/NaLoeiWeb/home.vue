@@ -17,7 +17,8 @@
                        :href="category.link"
                        class="relative overflow-hidden rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-800 text-center p-4 hover:bg-gray-100 dark:hover:bg-gray-700 transition">
                         <div class="flex justify-center mb-4">
-                            <UIcon :name="category.iconUrl" class="w-16 h-16 text-gray-500 dark:text-gray-400" />
+                            <UIcon :name="category.iconUrl"
+                                   class="w-16 h-16 text-gray-500 dark:text-gray-400" />
                         </div>
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                             {{ category.name }}
@@ -36,51 +37,21 @@ import { ref } from 'vue';
 const categories = ref([
     {
         id: 1,
-        name: 'เทคโนโลยีเพื่อสุขภาพ การก่อสร้าง และวัสดุเทคโนโลยีด้านวิศวกรรม',
-        iconUrl: 'i-mdi-health-potion',
-        link: '/ecommerce/healthTech',
-    },
-    {
-        id: 2,
-        name: 'นวัตกรรมสินค้ากรีนโปรดักส์',
-        iconUrl: 'i-mdi-leaf',
-        link: '/ecommerce/greenProducts',
-    },
-    {
-        id: 3,
-        name: 'การสื่อสาร การตลาด การท่องเที่ยว และศิลปวัฒนธรรม',
-        iconUrl: 'i-mdi-person-group',
-        link: '/ecommerce/communication',
-    },
-    {
-        id: 4,
-        name: 'ศูนย์การเรียนรู้พัฒนาธุรกิจและเทคโนโลยี',
-        iconUrl: 'i-mdi-book-open-page-variant',
-        link: '/ecommerce/businessTech',
-    },
-    {
-        id: 5,
-        name: 'นวัตกรรมการเงิน การลงทุนและการจัดการความเสี่ยงธุรกิจ',
-        iconUrl: 'i-mdi-finance',
-        link: '/ecommerce/finance',
-    },
-    {
-        id: 6,
         name: 'ห้องพัก',
         iconUrl: 'i-mdi-hotel',
         link: '/NaLoeiWeb/hotelBooking',
     },
     {
-        id: 6,
+        id: 2,
         name: 'จองรถ',
         iconUrl: 'i-mdi-car',
         link: '/NaLoeiWeb/carBooking',
     },
     {
-        id: 8,
+        id: 3,
         name: 'จองทัวร์',
         iconUrl: 'i-mdi-map',
         link: '/NaLoeiWeb/tourBooking',
-    }, 
+    },   
 ]);
 </script>
