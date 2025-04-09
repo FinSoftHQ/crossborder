@@ -51,7 +51,7 @@ const categories = ref([
         id: 3,
         name: 'จองทัวร์',
         iconUrl: 'i-mdi-map',
-        link: '/NaLoeiWeb/tourBooking',
+        link: '/NaLoeiWeb/carBooking',
     },   
 ]);
 </script>
