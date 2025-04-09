@@ -55,7 +55,7 @@ const links = [{
       to: '/car/back/carReport',
     }, {
       label: 'ลงทะเบียนรถให้เช่า',
-      to: '/hotel/back/hotelRegister',
+      to: '/car/back/carRegister',
     }]
 }]
 </script>
