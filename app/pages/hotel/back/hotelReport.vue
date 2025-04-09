@@ -3,7 +3,15 @@
         <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">รายงานสรุปการขายห้องพัก</h2>
             <div class="mt-6 space-y-4 border-b border-t border-gray-200 py-8 dark:border-gray-700 sm:mt-8">
-                <h3 class="mb-4 text-lg font-bold text-gray-900 dark:text-white">ข้อมูลการขายวันนี้</h3>
+                <div class="flex justify-between items-center">
+                    <h3 class="mb-4 text-lg font-bold text-gray-900 dark:text-white">ข้อมูลการขายวันนี้</h3>
+                    <NuxtLink to="/hotel/back/hotelRegister">
+                        <button type="button"
+                                class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+                            ลงขายห้องพักเพิ่ม
+                        </button>
+                    </NuxtLink>
+                </div>
                 <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                     <thead class="bg-gray-50 dark:bg-gray-800">
                         <tr>

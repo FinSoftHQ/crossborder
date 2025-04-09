@@ -19,8 +19,14 @@ const links = [{
   label: 'สินค้าที่สวนลงขาย',
   to: '/ecommerce/productPreView'
 }, {
-  label: 'โรงแรม',
-  to: '/hotel/back/hotelRegister'
+  label: 'จัดการโรงแรม',
+  to: '/hotel/back/hotelReport'
+}, {
+  label: 'บริการ',
+  to: '/NaLoeiWeb/home'
+}, {
+  label: 'ติดต่อบริการ',
+  to: '/hotel/naloei/hotelSale'
 }]
 </script>
 

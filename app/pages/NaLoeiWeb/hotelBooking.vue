@@ -30,18 +30,19 @@
                         <div class="pt-6">
                             <a href="#"
                                class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">{{
-                                room.name }}</a>
+                                room.type }}</a>
+                            <p class="text-sm font-medium text-gray-500 dark:text-gray-400">{{ room.hotelName }}</p>
                             <div class="mt-2 flex items-center gap-2">
                                 <p class="text-sm font-medium text-gray-900 dark:text-white">{{ room.capacity }}</p>
-                                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">({{ room.type }})
-                                </p>
+                                <!-- <p class="text-sm font-medium text-gray-500 dark:text-gray-400">({{ room.type }})
+                                </p> -->
                             </div>
                         </div>
                         <div class="mt-4 flex items-center justify-between gap-4">
                             <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">฿ {{
                                 room.pricePerNight }}</p>
                             <UButton to="/booking/reserveroom"
-                                     class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">  
+                                     class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 จองห้องพัก
                             </UButton>
                         </div>
@@ -63,53 +64,53 @@ import { ref } from 'vue';
 const rooms = ref([
     {
         id: 1,
-        name: 'Deluxe Room',
+        name: '101',
         pricePerNight: 1500,
         type: 'Double Bed',
         capacity: '2 Adults',
-        imageUrl: 'https://example.com/images/deluxe-room.jpg',
-        darkImageUrl: 'https://example.com/images/deluxe-room-dark.jpg',
-        bestSeller: true,
+        imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Double.png',
+        available: true,
+        hotelName: 'Hilton',
     },
     {
         id: 2,
-        name: 'Family Suite',
+        name: '102',
         pricePerNight: 3000,
-        type: 'Family',
-        capacity: '4 Adults',
-        imageUrl: 'https://example.com/images/family-suite.jpg',
-        darkImageUrl: 'https://example.com/images/family-suite-dark.jpg',
-        fastBooking: true,
+        type: 'Queen Size Bed',
+        capacity: '2 Adults',
+        imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Queen-size.png',
+        available: false,
+        hotelName: 'Marriott',
     },
     {
         id: 3,
-        name: 'Single Room',
+        name: '103',
         pricePerNight: 800,
         type: 'Single Bed',
         capacity: '1 Adult',
-        imageUrl: 'https://example.com/images/single-room.jpg',
-        darkImageUrl: 'https://example.com/images/single-room-dark.jpg',
-        bestPrice: true,
+        imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Single.png',
+        available: true,
+        hotelName: 'Hilton',
     },
     {
         id: 4,
-        name: 'Executive Suite',
+        name: '104',
         pricePerNight: 5000,
-        type: 'Suite',
+        type: 'Twin Bed',
         capacity: '2 Adults',
-        imageUrl: 'https://example.com/images/executive-suite.jpg',
-        darkImageUrl: 'https://example.com/images/executive-suite-dark.jpg',
-        luxury: true,
+        imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Twin.png',
+        available: false,
+        hotelName: 'Marriott',
     },
     {
         id: 5,
-        name: 'Standard Room',
+        name: '105',
         pricePerNight: 1000,
         type: 'Double Bed',
         capacity: '2 Adults',
-        imageUrl: 'https://example.com/images/standard-room.jpg',
-        darkImageUrl: 'https://example.com/images/standard-room-dark.jpg',
-        popular: true,
+        imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Double.png',
+        available: true,
+        hotelName: 'Hilton',
     },
 ]);
 </script>
