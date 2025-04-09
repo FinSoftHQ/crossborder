@@ -18,6 +18,9 @@ const links = [{
 }, {
   label: 'สินค้าที่สวนลงขาย',
   to: '/ecommerce/productPreView'
+}, {
+  label: 'โรงแรม',
+  to: '/hotel/back/hotelRegister'
 }]
 </script>
 
