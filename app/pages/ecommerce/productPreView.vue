@@ -97,7 +97,6 @@ const products = ref([
         name: 'Banana',
         price: 0.5,
         reviews: 'สด / แห้ง',
-        reviews: 98,
         weight: '100 kg',
         imageUrl: 'https://fit-d.com/uploads/food/5f6c8c69a8f190b979f93f02475aac80.jpg',
         darkImageUrl: 'https://example.com/images/banana-dark.svg',
