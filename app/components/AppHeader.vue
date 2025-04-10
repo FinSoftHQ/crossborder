@@ -57,6 +57,20 @@ const links = [{
       label: 'ลงทะเบียนรถให้เช่า',
       to: '/car/back/carRegister',
     }]
+}, {
+  label: 'แพ็กเกจทัวร์',
+  to: '/packageTour/home',
+  children: [
+    {
+      label: 'แพ็กเกจทัวร์',
+      to: '/packageTour/home',
+    }, {
+      label: 'จัดการแพ็กเกจทัวร์',
+      to: '/packagetour/reportpackage',
+    }, {
+      label: 'ลงทะเบียนแพ็กเกจทัวร์',
+      to: '/packagetour/createpackage',
+    }]
 }]
 </script>
 

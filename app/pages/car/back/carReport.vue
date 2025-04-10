@@ -33,6 +33,9 @@
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                 สถานะ</th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                แก้ไข</th>
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-700 dark:divide-gray-600">
@@ -53,6 +56,12 @@
                             }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">
                                 {{ car.isAvailable ? 'ว่าง' : 'จองแล้ว' }}
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">
+                                <button type="button"
+                                        class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
+                                    แก้ไข
+                                </button>
                             </td>
                         </tr>
                     </tbody>
@@ -146,4 +155,8 @@ const cars = ref([
 const totalRental = computed(() => {
     return cars.value.reduce((sum, car) => sum + car.pricePerDay, 0);
 });
+
+const editCar = (carId: number) => {
+    console.log(`Editing car with ID: ${carId}`);
+};
 </script>
