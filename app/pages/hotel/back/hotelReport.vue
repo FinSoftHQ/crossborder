@@ -33,6 +33,9 @@
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                 สถานะ</th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                แก้ไข</th>
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-700 dark:divide-gray-600">
@@ -44,15 +47,21 @@
                                      class="h-16 w-16 object-cover rounded">
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ room.name
-                                }}</td>
+                            }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ room.type
-                                }}</td>
+                            }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{
                                 room.pricePerNight }} บาท</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{
                                 room.capacity }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">
                                 {{ room.available ? 'ว่าง' : 'ไม่ว่าง' }}
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">
+                                <button type="button"
+                                        class="inline-flex items-center px-3 py-1.5 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
+                                    แก้ไข
+                                </button>
                             </td>
                         </tr>
                     </tbody>
