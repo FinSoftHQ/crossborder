@@ -5,7 +5,7 @@
                 <!-- Heading -->
                 <div class="mb-8 text-center">
                     <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-                        สินค้าและบริการทั้งหมด
+                        ที่พัก รถเช่า และทัวร์แนะนำสำหรับคุณ
                     </h2>
                     <div class="mt-8 mb-8 flex justify-between items-center">
                         <h2 class="text-md font-bold text-gray-900 dark:text-white sm:text-2xl">
@@ -13,7 +13,7 @@
                         </h2>
                         <a href="/NaLoeiWeb/hotelBooking"
                            class="text-blue-600 hover:underline dark:text-blue-400">
-                            ดูที่พักเพิ่มเติม
+                            ดูที่พักเพิ่มเติม >>
                         </a>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                     </h2>
                     <a href="/NaLoeiWeb/carBooking"
                        class="text-blue-600 hover:underline dark:text-blue-400">
-                        ดูรถเช่าเพิ่มเติม
+                        ดูรถเช่าเพิ่มเติม >>
                     </a>
                 </div>
                 <div class="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
@@ -109,7 +109,7 @@
                     </h2>
                     <a href="/packageTour/home"
                        class="text-blue-600 hover:underline dark:text-blue-400">
-                        ดูทัวร์เพิ่มเติม
+                        ดูทัวร์เพิ่มเติม >>
                     </a>
                 </div>
                 <div class="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
@@ -265,6 +265,17 @@ const rooms = ref([
         available: true,
         hotelName: 'Hilton',
         rating: 4.3,
+    },
+    {
+        id: 6,
+        name: '106',
+        pricePerNight: 2000,
+        type: 'King Size Bed',
+        capacity: '2 Adults',
+        imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/King-size.png',
+        available: true,
+        hotelName: 'Sheraton',
+        rating: 4.7,
     },
 ]);
 
