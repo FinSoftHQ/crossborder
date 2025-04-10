@@ -4,28 +4,91 @@
             <form @submit.prevent="submitOrder"
                   class="mx-auto max-w-screen-xl px-4 2xl:px-0">
                 <div class="mx-auto max-w-3xl">
+                    <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 flex justify-between items-center"
+                         role="alert">
+                        <span>โปรโมชั่นพิเศษ! หากจองรถและทัวร์เพิ่ม รับส่วนลด 20%</span>
+                       <NuxtLink to="/NaLoeiWeb/home">
+                        <button 
+                                class="ml-4 px-3 py-1 text-sm font-medium bg-white text-green-800 rounded-lg hover:bg-gray-100">
+                            จองเพิ่ม
+                        </button>
+                       </NuxtLink>
+                    </div>
                     <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">สินค้ารวมทั้งหมด</h2>
 
                     <div class="mt-3 space-y-4 border-b border-t border-gray-200 py-8 dark:border-gray-700 sm:mt-8">
                         <h4 class="text-lg font-semibold text-gray-900 dark:text-white">รายละเอียดการจอง</h4>
+                        <form action="#">
+                            <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+                                <!-- Booking Name -->
+                                <div>
+                                    <label for="booking-name"
+                                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อ</label>
+                                    <input type="text"
+                                           id="booking-name"
+                                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                           placeholder="กรอกชื่อ"
+                                           required>
+                                </div>
+                                <div>
+                                    <label for="booking-name"
+                                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">สกุล</label>
+                                    <input type="text"
+                                           id="booking-name"
+                                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                           placeholder="กรอกสกุล"
+                                           required>
+                                </div>
 
-                        <dl>
-                            <dt class="text-base font-medium text-gray-900 dark:text-white">ผู้จอง: Somchai Sittipong
-                            </dt>
-                            <dd class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">
-                                อีเมล: somchai@example.com
-                            </dd>
-                            <dd class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">
-                                เบอร์โทร: +66 123 456 789
-                            </dd>
-                            <dd class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">
-                                วันที่เช็คอิน: 2023-12-01
-                            </dd>
-                            <dd class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">
-                                วันที่เช็คเอาท์: 2023-12-05
-                            </dd>
-                            <br />
-                        </dl>
+                                <!-- Email -->
+                                <div>
+                                    <label for="email"
+                                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">อีเมล</label>
+                                    <input type="email"
+                                           id="email"
+                                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                           placeholder="กรอกอีเมล เช่น example@example.com"
+                                           required>
+                                </div>
+
+                                <!-- Phone Number -->
+                                <div>
+                                    <label for="phone-number"
+                                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เบอร์โทร</label>
+                                    <input type="tel"
+                                           id="phone-number"
+                                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                           placeholder="กรอกเบอร์โทร เช่น +66 123 456 789"
+                                           required>
+                                </div>
+                                <!-- Additional Requests -->
+                                <div class="sm:col-span-2">
+                                    <label for="additional-requests"
+                                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">คำขอเพิ่มเติม</label>
+                                    <textarea id="additional-requests"
+                                              rows="4"
+                                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                              placeholder="กรอกคำขอเพิ่มเติม เช่น ขอห้องใกล้ลิฟต์"></textarea>
+                                </div>
+
+                                <!-- Check-in Date -->
+                                <div class="sm:col-span-2">
+                                    <h3 class="text-md font-semibold text-gray-900 dark:text-white">วันที่จอง</h3>
+                                </div>
+                                <div>
+                                    <label
+                                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">วันที่เช็คอิน</label>
+                                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">2023-12-01</p>
+                                </div>
+
+                                <!-- Check-out Date -->
+                                <div>
+                                    <label
+                                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">วันที่เช็คเอาท์</label>
+                                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">2023-12-05</p>
+                                </div>
+                            </div>
+                        </form>
                         <button type="button"
                                 @click="toggleModal"
                                 class="text-base font-medium text-primary-700 hover:underline dark:text-primary-500">แก้ไข</button>
@@ -230,7 +293,7 @@
                                 </UButton>
                                 <UButton to="/ecommerce/payment"
                                          class="flex w-full items-center justify-center rounded-lg bg-primary-700  px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300  dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:mt-0">
-                                    จองห้องพัก
+                                    จอง
                                 </UButton>
                             </div>
                         </div>
@@ -303,13 +366,13 @@ const orderItems = ref([
     },
     {
         id: 2,
-        name: '102',
-        pricePerNight: 3000,
-        type: 'Queen Size Bed',
-        capacity: '2 Adults',
-        image: 'https://hotelsup.co/wp-content/uploads/2022/05/Queen-size.png',
-        available: false,
-        hotelName: 'Marriott',
+        name: '103',
+        pricePerNight: 800,
+        type: 'Single Bed',
+        capacity: '1 Adult',
+        image: 'https://hotelsup.co/wp-content/uploads/2022/05/Single.png',
+        available: true,
+        hotelName: 'Hilton',
         nights: 3, // Add nights property
     },
 ]);
@@ -346,6 +409,7 @@ const calculateTotal = () => {
     const total = orderItems.value.reduce((sum, item) => sum + item.pricePerNight * item.nights, 0);
     orderSummary.value.total = `₿${total.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
 };
+
 
 
 // Watch for changes in orderItems and recalculate the total
