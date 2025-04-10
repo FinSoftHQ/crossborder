@@ -128,4 +128,5 @@ const cars = ref([
         registrationNumber: 'VAN-1122',
     },
 ]);
+
 </script>

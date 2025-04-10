@@ -63,24 +63,6 @@ const categories = ref([
         name: 'นวัตกรรมการเงิน การลงทุนและการจัดการความเสี่ยงธุรกิจ',
         iconUrl: 'i-mdi-finance',
         link: '/ecommerce/finance',
-    },
-    {
-        id: 6,
-        name: 'ห้องพัก',
-        iconUrl: 'i-mdi-hotel',
-        link: '/NaLoeiWeb/hotelBooking',
-    },
-    {
-        id: 6,
-        name: 'จองรถ',
-        iconUrl: 'i-mdi-car',
-        link: '/NaLoeiWeb/carBooking',
-    },
-    {
-        id: 8,
-        name: 'จองทัวร์',
-        iconUrl: 'i-mdi-map',
-        link: '/packageTour/home',
-    }, 
+    },   
 ]);
 </script>
