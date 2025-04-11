@@ -7,12 +7,12 @@
                     <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">สินค้ารวมทั้งหมด</h2>
 
                     <div class="mt-6 space-y-4 border-b border-t border-gray-200 py-8 dark:border-gray-700 sm:mt-8">
-                        <h4 class="text-lg font-semibold text-gray-900 dark:text-white">ข้อมูลการจัดส่ง</h4>
+                        <h4 class="text-lg font-semibold text-gray-900 dark:text-white">ข้อมูลสถานที่รับสินค้า</h4>
 
                         <dl>
-                            <dt class="text-base font-medium text-gray-900 dark:text-white">Somchai Sittipong</dt>
+                            <dt class="text-base font-medium text-gray-900 dark:text-white">สวนผลไม้สุขใจ</dt>
                             <dd class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">
-                                Lao PDR, Vientiane, 1234, Lane Xang Avenue
+                                1234, ถนนสุขใจ, ตำบลสวนผลไม้, อำเภอเมือง, จังหวัดเลย, ประเทศไทย
                             </dd>
                             <br />
                         </dl>
@@ -51,7 +51,7 @@
                                             item.quantity
                                         }}</td>
                                         <td class="p-4 text-right text-base font-bold text-gray-900 dark:text-white">{{
-                                            `₿ ${(item.price *
+                                            `฿ ${(item.price *
                                                 item.quantity).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}` }}</td>
                                     </tr>
                                 </tbody>
@@ -283,7 +283,7 @@ const orderItems = ref([
     {
         id: 1,
         name: 'Apple',
-        price: 1.5,
+        price: 120,
         rating: 4.8,
         reviews: 'สด / แห้ง',
         weight: '100 kg',
@@ -294,7 +294,7 @@ const orderItems = ref([
     {
         id: 2,
         name: 'Banana',
-        price: 0.5,
+        price: 50,
         reviews: 'สด / แห้ง',
         weight: '100 kg',
         image: 'https://fit-d.com/uploads/food/5f6c8c69a8f190b979f93f02475aac80.jpg',
@@ -304,11 +304,11 @@ const orderItems = ref([
 ]);
 
 const orderSummary = ref({
-    originalPrice: '₿ 2.00', // Updated
-    savings: '₿ 0.00', // Updated
-    storePickup: '₿ 0.00', // Updated
-    tax: '₿ 0.00', // Updated
-    total: '₿ 2.00', // Updated
+    originalPrice: '฿ 2.00', // Updated
+    savings: '฿ 0.00', // Updated
+    storePickup: '฿ 0.00', // Updated
+    tax: '฿ 0.00', // Updated
+    total: '฿ 2.00', // Updated
 });
 
 const toggleModal = () => {
@@ -334,11 +334,11 @@ const returnToShopping = () => {
 
 const calculateTotal = () => {
     const total = orderItems.value.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    orderSummary.value.originalPrice = `₿${total.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
-    orderSummary.value.savings = '₿ 0.00'; // Ensure savings is 0
-    orderSummary.value.storePickup = '₿ 0.00'; // Ensure store pickup is 0
-    orderSummary.value.tax = '₿ 0.00'; // Ensure tax is 0
-    orderSummary.value.total = orderSummary.value.originalPrice; // Total equals original price
+    orderSummary.value.originalPrice = `฿${total.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
+    orderSummary.value.savings = '฿ 0.00'; // Ensure savings is 0
+    orderSummary.value.storePickup = '฿ 120.00'; // Updated shipping cost
+    orderSummary.value.tax = '฿ 0.00'; // Ensure tax is 0
+    orderSummary.value.total = `฿${(total + 120).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`; // Total includes shipping
 };
 
 
