@@ -2,69 +2,72 @@
     <section class="bg-white dark:bg-gray-900">
         <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
             <div class="max-w-xl mx-auto text-center">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-              นวัตกรรมการพัฒนาธุรกิจ ผู้ประกอบการ การจัดการองค์กร
-            </h2>
-            <p class="mt-4 text-gray-500 dark:text-gray-400">
-                วิชาชีพและการสร้างต้นแบบ ณ เลยพีเพิล และเทคโนโลยี เมตาเวิร์ส
-            </p>
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+                    นวัตกรรมการพัฒนาธุรกิจ ผู้ประกอบการ การจัดการองค์กร
+                </h2>
+                <p class="mt-4 text-gray-500 dark:text-gray-400">
+                    วิชาชีพและการสร้างต้นแบบ ณ เลยพีเพิล และเทคโนโลยี เมตาเวิร์ส
+                </p>
             </div>
 
             <div class="grid grid-cols-1 gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-4">
-            <a v-for="product in products"
-               :key="product.title"
-               href="#"
-               class="block p-8 transition border border-gray-100 shadow-xl rounded-xl hover:shadow-lg hover:border-gray-200 dark:border-gray-800 dark:shadow-gray-800 dark:hover:border-gray-700">
-                <img :src="product.image"
-                 :alt="product.title"
-                 class="w-full h-48 mb-4 rounded-lg object-cover" />
-                <h3 class="text-lg font-bold text-gray-900 dark:text-white">
-                {{ product.title }}
-                </h3>
-                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
-                {{ product.description }}
-                </p>
-            </a>
+                <a v-for="product in products"
+                   :key="product.title"
+                   href="#"
+                   class="block p-8 transition border border-gray-100 shadow-xl rounded-xl hover:shadow-lg hover:border-gray-200 dark:border-gray-800 dark:shadow-gray-800 dark:hover:border-gray-700">
+                    <img :src="product.image"
+                         :alt="product.title"
+                         class="w-full h-48 mb-4 rounded-lg object-cover" />
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white">
+                        {{ product.title }}
+                    </h3>
+                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                        {{ product.description }}
+                    </p>
+                </a>
             </div>
         </div>
         <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
             <div class="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
-                <div v-for="product in products2" 
-                     :key="product.id" 
+                <div v-for="product in products2"
+                     :key="product.id"
                      class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
                     <div class="h-56 w-full">
                         <a href="#">
-                            <img :src="product.imageUrl" 
-                                 class="mx-auto h-full dark:hidden" 
+                            <img :src="product.imageUrl"
+                                 class="mx-auto h-full dark:hidden"
                                  :alt="product.name" />
-                            <img :src="product.darkImageUrl" 
-                                 class="mx-auto hidden h-full dark:block" 
+                            <img :src="product.darkImageUrl"
+                                 class="mx-auto hidden h-full dark:block"
                                  :alt="product.name" />
                         </a>
                     </div>
                     <div class="pt-6">
-                        <a href="#" 
+                        <a href="#"
                            class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">
                             {{ product.name }}
                         </a>
                         <div class="mt-2 flex items-center gap-2">
                             <div class="flex items-center">
-                                <svg v-for="n in Math.floor(product.rating)" 
-                                     :key="n" 
-                                     class="h-4 w-4 text-yellow-400" 
-                                     aria-hidden="true" 
-                                     xmlns="http://www.w3.org/2000/svg" 
-                                     fill="currentColor" 
+                                <svg v-for="n in Math.floor(product.rating)"
+                                     :key="n"
+                                     class="h-4 w-4 text-yellow-400"
+                                     aria-hidden="true"
+                                     xmlns="http://www.w3.org/2000/svg"
+                                     fill="currentColor"
                                      viewBox="0 0 24 24">
-                                    <path d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                    <path
+                                          d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
                                 </svg>
                             </div>
                             <p class="text-sm font-medium text-gray-900 dark:text-white">{{ product.rating }}</p>
                             <p class="text-sm font-medium text-gray-500 dark:text-gray-400">({{ product.reviews }})</p>
                         </div>
                         <div class="mt-4 flex items-center justify-between gap-4">
-                            <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">₿ {{ product.price }}</p>
-                            <UButton to="/ecommerce/orderproduct" 
+                            <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">
+                                ฿ {{ product.price.toLocaleString() }}
+                            </p>
+                            <UButton to="/ecommerce/orderproduct"
                                      class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 สั่งสินค้า
                             </UButton>
@@ -187,4 +190,3 @@ const products2 = ref([
     },
 ]);
 </script>
-

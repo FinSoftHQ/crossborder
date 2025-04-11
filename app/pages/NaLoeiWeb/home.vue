@@ -8,52 +8,85 @@
                         ที่พัก รถเช่า และทัวร์แนะนำสำหรับคุณ
                     </h2>
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex justify-center mb-4">
-                        <div class="relative w-full max-w-lg">
-                            <input 
-                                v-model="searchQuery" 
-                                type="text" 
-                                placeholder="ค้นหาโรงแรม ทัวร์ หรือบริษัท..." 
-                                class="w-full p-2 pl-10 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            />
-                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6a4 4 0 100 8 4 4 0 000-8zm8 14l-4-4" />
-                                </svg>
+                        <div class="flex justify-center mb-4">
+                            <div class="relative w-full max-w-lg">
+                                <input v-model="searchQuery"
+                                       type="text"
+                                       placeholder="ค้นหาโรงแรม ทัวร์ หรือบริษัท..."
+                                       class="w-full p-2 pl-10 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         class="h-5 w-5 text-gray-500 dark:text-gray-400"
+                                         fill="none"
+                                         viewBox="0 0 24 24"
+                                         stroke="currentColor">
+                                        <path stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                              d="M10 6a4 4 0 100 8 4 4 0 000-8zm8 14l-4-4" />
+                                    </svg>
+                                </div>
                             </div>
                         </div>
-                    </div>
                         <!-- Search UI -->
                         <div class="flex flex-wrap items-center justify-center gap-6">
-                            <div id="date-range-picker" class="flex items-center">
+                            <div id="date-range-picker"
+                                 class="flex items-center">
                                 <div class="relative">
-                                    <label for="datepicker-range-start" class="sr-only">Check-in Date</label>
+                                    <label for="datepicker-range-start"
+                                           class="sr-only">Check-in Date</label>
                                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                        <svg class="w-5 h-5 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                        <svg class="w-5 h-5 text-gray-500"
+                                             aria-hidden="true"
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             fill="currentColor"
+                                             viewBox="0 0 20 20">
+                                            <path
+                                                  d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                         </svg>
                                     </div>
-                                    <input id="datepicker-range-start" name="start" type="date" v-model="searchCriteria.checkIn" class="block w-full pl-10 p-2.5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Check-in">
+                                    <input id="datepicker-range-start"
+                                           name="start"
+                                           type="date"
+                                           v-model="searchCriteria.checkIn"
+                                           class="block w-full pl-10 p-2.5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                                           placeholder="Check-in">
                                 </div>
                                 <span class="mx-4 text-gray-500">to</span>
                                 <div class="relative">
-                                    <label for="datepicker-range-end" class="sr-only">Check-out Date</label>
+                                    <label for="datepicker-range-end"
+                                           class="sr-only">Check-out Date</label>
                                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                        <svg class="w-5 h-5 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                        <svg class="w-5 h-5 text-gray-500"
+                                             aria-hidden="true"
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             fill="currentColor"
+                                             viewBox="0 0 20 20">
+                                            <path
+                                                  d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                         </svg>
                                     </div>
-                                    <input id="datepicker-range-end" name="end" type="date" v-model="searchCriteria.checkOut" class="block w-full pl-10 p-2.5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Check-out">
+                                    <input id="datepicker-range-end"
+                                           name="end"
+                                           type="date"
+                                           v-model="searchCriteria.checkOut"
+                                           class="block w-full pl-10 p-2.5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                                           placeholder="Check-out">
                                 </div>
                             </div>
                             <div class="flex items-center">
-                                <label for="guest-type" class="mr-2 text-sm font-medium text-gray-900">ประเภทผู้เข้าพัก</label>
-                                <select id="guest-type" v-model="searchCriteria.guestType" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500">
+                                <label for="guest-type"
+                                       class="mr-2 text-sm font-medium text-gray-900">ประเภทผู้เข้าพัก</label>
+                                <select id="guest-type"
+                                        v-model="searchCriteria.guestType"
+                                        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500">
                                     <option value="adult">ผู้ใหญ่</option>
                                     <option value="child">เด็ก</option>
                                 </select>
                             </div>
-                            <UButton @click="searchRooms" type="button" class="inline-flex items-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                            <UButton @click="searchRooms"
+                                     type="button"
+                                     class="inline-flex items-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
                                 ค้นหา
                             </UButton>
                         </div>
@@ -85,7 +118,7 @@
                                 {{ room.hotelName }}
                             </a>
                             <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{{ room.type }} - {{ room.capacity
-                            }}</p>
+                                }}</p>
                             <div class="mt-2 flex items-center gap-2">
                                 <div class="flex items-center">
                                     <svg v-for="n in Math.floor(room.rating)"
@@ -103,7 +136,7 @@
                             </div>
                             <div class="mt-4 flex items-center justify-between gap-4">
                                 <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">฿ {{
-                                    room.pricePerNight }}</p>
+                                    formatPrice(room.pricePerNight) }}</p>
                                 <UButton to="/NaLoeiWeb/orderSummary"
                                          class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                     จองห้องพัก
@@ -146,7 +179,7 @@
                         </div>
                         <div class="mt-4 flex items-center justify-between gap-4">
                             <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">฿ {{
-                                car.pricePerDay }}</p>
+                                formatPrice(car.pricePerDay) }}</p>
                             <UButton
                                      class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 จองรถ
@@ -222,7 +255,7 @@
                                 ราคาเริ่มต้น บาท/ท่าน</p>
                             <div class="flex items-center justify-between gap-4">
                                 <p class="text-2xl font-extrabold leading-tight text-red-700 dark:text-white">{{
-                                    tour.price }}</p>
+                                    formatPrice(tour.price) }}</p>
                                 <NuxtLink :to="tour.link"
                                           class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                     ดูรายละเอียด
@@ -430,7 +463,10 @@ const searchCriteria = ref({
     guestType: 'adult',
 });
 
-
+// Utility function to format numbers with commas
+function formatPrice(price: number): string {
+    return price.toLocaleString('en-US');
+}
 
 function searchRooms() {
     console.log('Searching with criteria:', searchCriteria.value);

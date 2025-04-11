@@ -50,10 +50,11 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ car.type }}
                             </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{
-                                car.pricePerDay }} บาท</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">
+                                {{ formatPrice(car.pricePerDay) }} บาท
+                            </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ car.seats
-                            }}</td>
+                                }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">
                                 {{ car.isAvailable ? 'ว่าง' : 'จองแล้ว' }}
                             </td>
@@ -153,8 +154,12 @@ const cars = ref([
 ]);
 
 const totalRental = computed(() => {
-    return cars.value.reduce((sum, car) => sum + car.pricePerDay, 0);
+    return cars.value.reduce((sum, car) => sum + car.pricePerDay, 0).toLocaleString();
 });
+
+const formatPrice = (price: number) => {
+    return price.toLocaleString();
+};
 
 const editCar = (carId: number) => {
     console.log(`Editing car with ID: ${carId}`);
