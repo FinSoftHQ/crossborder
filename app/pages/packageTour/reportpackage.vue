@@ -41,10 +41,11 @@
                                      class="h-16 w-16 object-cover rounded">
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ room.name
-                                }}</td>
+                            }}</td>
 
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{
-                                room.pricePerNight }} บาท</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">
+                                {{ formatPrice(room.pricePerNight) }} บาท
+                            </td>
 
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">
                                 {{ room.available ? 'เปิดขาย' : 'ปิดอยู่' }}
@@ -111,4 +112,9 @@ const rooms = ref([
 const totalSales = computed(() => {
     return rooms.value.reduce((sum, room) => sum + room.pricePerNight, 0);
 });
+
+// Add a function to format numbers with commas
+function formatPrice(value: number): string {
+    return value.toLocaleString('en-US');
+}
 </script>

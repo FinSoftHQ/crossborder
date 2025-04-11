@@ -47,11 +47,11 @@
                                      class="h-16 w-16 object-cover rounded">
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ room.name
-                            }}</td>
+                                }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ room.type
-                            }}</td>
+                                }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{
-                                room.pricePerNight }} บาท</td>
+                                room.pricePerNight.toLocaleString() }} บาท</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{
                                 room.capacity }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">
@@ -67,7 +67,8 @@
                     </tbody>
                 </table>
                 <div class="mt-4">
-                    <p class="text-lg font-semibold text-gray-900 dark:text-white">รวมยอดขาย: {{ totalSales }} บาท</p>
+                    <p class="text-lg font-semibold text-gray-900 dark:text-white">รวมยอดขาย: {{
+                        totalSales.toLocaleString() }} บาท</p>
                 </div>
             </div>
         </div>

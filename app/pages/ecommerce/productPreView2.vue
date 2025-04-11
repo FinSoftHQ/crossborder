@@ -179,7 +179,7 @@
                                 </li>
                             </ul>
                             <div class="mt-4 flex items-center justify-between gap-4">
-                                <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">₿ {{
+                                <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">฿ {{
                                     product.price }}</p>
                                 <UButton to="/ecommerce/orderproductP"
                                          class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
@@ -222,7 +222,7 @@ const products = ref([
   {
     id: 1,
     name: 'Apple',
-    price: 1.5,
+    price: 120,
     discount: 'สวนผลไม้สุขใจ',
     rating: 4.8,
     reviews: 120,
@@ -235,7 +235,7 @@ const products = ref([
   {
     id: 2,
     name: 'Banana',
-    price: 0.5,
+    price: 50,
     discount: 'สวนผลไม้สุขใจ',
     rating: 4.7,
     reviews: 98,
@@ -248,7 +248,7 @@ const products = ref([
   {
     id: 3,
     name: 'Cherry',
-    price: 3.0,
+    price: 150,
     discount: 'สวนผลไม้สุขใจ',
     rating: 4.9,
     reviews: 150,
@@ -260,7 +260,7 @@ const products = ref([
   {
     id: 4,
     name: 'Grapes',
-    price: 2.5,
+    price: 90,
     discount: 'สวนผลไม้สุขใจ',
     rating: 4.6,
     reviews: 75,
@@ -272,7 +272,7 @@ const products = ref([
   {
     id: 5,
     name: 'Orange',
-    price: 1.2,
+    price: 100,
     discount: 'สวนผลไม้สุขใจ',
     rating: 4.7,
     reviews: 110,
@@ -284,7 +284,7 @@ const products = ref([
   {
     id: 6,
     name: 'Pineapple',
-    price: 3.5,
+    price: 80,
     discount: 'สวนผลไม้สุขใจ',
     rating: 4.8,
     reviews: 90,
@@ -296,7 +296,7 @@ const products = ref([
   {
     id: 7,
     name: 'Strawberry',
-    price: 4.0,   
+    price: 180,   
     discount: 'สวนผลไม้สุขใจ',
     rating: 4.9,
     reviews: 200,
@@ -309,53 +309,3 @@ const products = ref([
 </script>
 
 
-{
-    id: 1,
-    name: '101',
-    pricePerNight: 1500,
-    type: 'Double Bed',
-    capacity: '2 Adults',
-    imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Double.png',
-    available: true,
-    hotelName: 'Hilton',
-},
-{
-    id: 2,
-    name: '102',
-    pricePerNight: 3000,
-    type: 'Queen Size Bed',
-    capacity: '2 Adults',
-    imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Queen-size.png',
-    available: false,
-    hotelName: 'Marriott',
-},
-{
-    id: 3,
-    name: '103',
-    pricePerNight: 800,
-    type: 'Single Bed',
-    capacity: '1 Adult',
-    imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Single.png',
-    available: true,
-    hotelName: 'Hilton',
-},
-{
-    id: 4,
-    name: '104',
-    pricePerNight: 5000,
-    type: 'Twin Bed',
-    capacity: '2 Adults',
-    imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Twin.png',
-    available: false,
-    hotelName: 'Marriott',
-},
-{
-    id: 5,
-    name: '105',
-    pricePerNight: 1000,
-    type: 'Double Bed',
-    capacity: '2 Adults',
-    imageUrl: 'https://hotelsup.co/wp-content/uploads/2022/05/Double.png',
-    available: true,
-    hotelName: 'Hilton',
-},
