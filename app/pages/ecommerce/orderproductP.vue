@@ -199,20 +199,19 @@
 
                   <dl class="flex items-center justify-between gap-4">
                     <dt class="text-base font-normal text-gray-500 dark:text-gray-400">การจัดส่ง</dt>
-                    <dd class="text-base font-medium text-gray-900 dark:text-white">₿ 99</dd>
+                    <dd class="text-base font-medium text-gray-900 dark:text-white">₿ 120</dd> <!-- Updated to 120 -->
                   </dl>
 
                   <dl class="flex items-center justify-between gap-4">
                     <dt class="text-base font-normal text-gray-500 dark:text-gray-400">Tax</dt>
-                    <dd class="text-base font-medium text-gray-900 dark:text-white">₿ 799</dd>
+                    <dd class="text-base font-medium text-gray-900 dark:text-white">₿ 0</dd> <!-- Updated to 0 -->
                   </dl>
                 </div>
 
                 <dl class="flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700">
                   <dt class="text-base font-bold text-gray-900 dark:text-white">ยอดรวมทั้งหมด</dt>
-                  <dd class="text-base font-bold text-gray-900 dark:text-white">₿ {{ totalPrice.toLocaleString() }}</dd>
-
-
+                  <dd class="text-base font-bold text-gray-900 dark:text-white">₿ {{ finalTotal.toLocaleString() }}</dd>
+                  <!-- Updated to use finalTotal -->
                 </dl>
               </div>
 
@@ -254,7 +253,7 @@ const products = ref([
   {
     id: 1,
     name: 'Apple',
-    price: 1.5,
+    price: 120,
     rating: 4.8,
     reviews: 'สด / แห้ง',
     weight: '100 kg',
@@ -265,7 +264,7 @@ const products = ref([
   {
     id: 2,
     name: 'Banana',
-    price: 0.5,
+    price: 50,
     reviews: 'สด / แห้ง',
     weight: '100 kg',
     imageLight: 'https://fit-d.com/uploads/food/5f6c8c69a8f190b979f93f02475aac80.jpg',
@@ -296,5 +295,11 @@ const totalPrice = computed(() => {
   return products.value.reduce((total, product) => {
     return product.selected ? total + product.price * product.quantity : total;
   }, 0);
+});
+
+const shippingCost = 120; // Added shipping cost
+
+const finalTotal = computed(() => {
+  return totalPrice.value + shippingCost; // Includes shipping cost
 });
 </script>
