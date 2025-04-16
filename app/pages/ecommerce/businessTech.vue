@@ -84,7 +84,7 @@ const products = [
     {
         title: "การบริหารจัดการธุรกิจ",
         description: "การจัดการองค์กรและธุรกิจอย่างมีประสิทธิภาพ",
-        image: "https://1stcraft.com/wp-content/uploads/2020/05/20200523_1SC_ArticleCover.jpg",
+        image: "/images/pp3.png",
     },
     {
         title: "เมตาเวิร์ส (Metaverse)",

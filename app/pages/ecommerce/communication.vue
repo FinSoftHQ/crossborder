@@ -39,7 +39,7 @@ const products = ref([
   {
     title: 'บริการ และรับปรึกษาด้านการสื่อสาร',
     description: 'Free Consultation',
-    image: 'https://www.tis-production.com/images/products/gallery/%E0%B8%9B%E0%B8%A3%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2-%E0%B8%A7%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%9C%E0%B8%991.jpg',
+    image: 'https://media.graphassets.com/resize=fit:crop,width:1200,height:630/F33znRaQCmGGjS7jHG52',
   },
   {
     title: 'บริการ และรับปรึกษาด้านการสร้าง Branding Brand DNA',
