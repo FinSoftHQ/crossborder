@@ -37,7 +37,7 @@ const products = [
     {
         title: "นวัตกรรมประกันภัย และบริหารความเสี่ยง",
         description: "การจัดการความเสี่ยงและการประกันภัยที่มีประสิทธิภาพ",
-        image: "https://tiins.com/wp-content/uploads/2019/10/performance-management-1030x412.png",
+        image: "https://storage.googleapis.com/techsauce-prod/ugc/uploads/2022/4/Fintech_800.jpg",
     },
     {
         title: "นวัตกรรมกางกฏหมาย และคดีความ",

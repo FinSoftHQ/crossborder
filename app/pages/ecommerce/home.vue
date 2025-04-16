@@ -39,7 +39,7 @@ const products = ref([
     {
         id: 1,
         title: 'เทคโนโลยีเพื่อสุขภาพ การก่อสร้าง และวัสดุเทคโนโลยีด้านวิศวกรรม',
-        image: 'http://localhost:3000/images/b1.jpg',
+        image: 'https://globcommerce.netlify.app/images/b2.jpg',
         link: '/ecommerce/healthTech',
     },
     {
@@ -51,19 +51,19 @@ const products = ref([
     {
         id: 3,
         title: 'การสื่อสาร การตลาด การท่องเที่ยว และศิลปวัฒนธรรม',
-        image: 'https://1stcraft.com/wp-content/uploads/2020/05/20200523_1SC_ArticleCover.jpg',
+        image: 'https://media.graphassets.com/resize=fit:crop,width:1200,height:630/F33znRaQCmGGjS7jHG52',
         link: '/ecommerce/communication',
     },
     {
         id: 4,
         title: 'ศูนย์การเรียนรู้พัฒนาธุรกิจและเทคโนโลยี',
-        image: 'https://storage.googleapis.com/techsauce-prod/ugc/uploads/2023/2/1676376902_1200X800_13_%E0%B9%80%E0%B8%84%E0%B8%A5%E0%B9%87%E0%B8%94%E0%B8%A5%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%AD%E0%B8%9A%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%9A%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%A3%E0%B9%87%E0%B8%88_.jpg',
+        image: '/images/pp3.png',
         link: '/ecommerce/businessTech',
     },
     {
         id: 5,
         title: 'นวัตกรรมการเงิน การลงทุนและการจัดการความเสี่ยงธุรกิจ',
-        image: 'https://www.exim.go.th/eximinter/e-news/20341/image/finance/chart-1.jpg',
+        image: 'https://storage.googleapis.com/techsauce-prod/ugc/uploads/2022/4/Fintech_800.jpg',
         link: '/ecommerce/finance',
     }
 ]);
