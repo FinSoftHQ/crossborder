@@ -281,8 +281,8 @@ const products = ref([
         discount: 'Up to 25% off',
         rating: 4.9,
         reviews: 250,
-        imageUrl: '/images/g5.jpg',
-        darkImageUrl: 'https://example.com/vitamin-dark.svg',
+        imageUrl: '/images/pp2.jpg',
+        darkImageUrl: '/images/pp2.jpg',
         bestSeller: true,
     },
     {
