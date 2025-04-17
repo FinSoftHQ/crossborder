@@ -18,6 +18,9 @@ const links = [{
   }, {
     label: 'บริการอื่น ๆ',
     to: '/NaLoeiWeb/home'
+  }, {
+    label: 'รายได้จากการขาย',
+    to: '/NaLoeiWeb/financeStock'
   }]
 }, {
   label: 'สวนผู้ขาย',

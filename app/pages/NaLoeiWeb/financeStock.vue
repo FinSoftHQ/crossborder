@@ -3,7 +3,7 @@
         <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
             <div class="mx-auto max-w-5xl">
                 <div class="gap-4 lg:flex lg:items-center lg:justify-between mb-4">
-                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">การเงิน</h2>
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">รายได้จากการขาย</h2>
                     <div class="flex items-center space-x-4">
                         <label for="reportFilter"
                                class="text-sm font-medium text-gray-700 dark:text-gray-300">เลือกช่วงเวลา:</label>
