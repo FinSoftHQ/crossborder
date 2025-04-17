@@ -13,7 +13,7 @@
                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อร้านค้า/สวน/สถานที่</label>
                                 <select id="location"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                    <option selected="">เลือกชื่อร้านค้า/สวน/สถานที่</option>
+                                    <option selected>เลือกชื่อร้านค้า/สวน/สถานที่</option>
                                     <option value="สวนผลไม้สุขใจ">สวนผลไม้สุขใจ</option>
                                     <option value="ฟาร์มผักสด">ฟาร์มผักสด</option>
                                     <option value="ร้านสมุนไพรไทย">ร้านสมุนไพรไทย</option>
@@ -66,7 +66,7 @@
                                        id="product-name"
                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                        placeholder="กรอกชื่อสินค้า"
-                                       required="">
+                                       required>
                             </div>
 
                             <!-- Product Type -->
@@ -75,7 +75,7 @@
                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ประเภทสินค้า</label>
                                 <select id="category"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                    <option selected="">เลือกประเภทสินค้า</option>
+                                    <option selected>เลือกประเภทสินค้า</option>
                                     <option value="สด / แห้ง">สด / แห้ง</option>
                                     <option value="ผง">ผง</option>
                                     <option value="สารสกัด">สารสกัด</option>
@@ -134,7 +134,7 @@
                                            id="item-weight"
                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                            placeholder="กรอกจำนวนสินค้า"
-                                           required="">
+                                           required>
                                 </div>
                                 <!-- Product Price -->
                                 <label for="product-price"
@@ -144,13 +144,13 @@
                                     id="product-price"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                     placeholder="กรอกราคาสินค้า"
-                                    required="">
+                                    required>
                             </div>
                         </div>
-                            <button type="button"
+                            <UButton to="/ecommerce/productPreView"
                                     class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
                                 บันทึกข้อมูล
-                            </button>
+                            </UButton>
                     </form>
                 </div>
             </div>

@@ -21,8 +21,11 @@ const links = [{
   }]
 }, {
   label: 'สวนผู้ขาย',
-  to: '/ecommerce/productPreView',
+  to: '/ecommerce/registerStore',
   children: [{
+    label: 'ลงทะเบียนร้านค้า',
+    to: '/ecommerce/registerStore',
+  }, {
     label: 'สินค้าที่สวนลงขาย',
     to: '/ecommerce/productPreView',
   }, {
@@ -79,25 +82,25 @@ const links = [{
     <template #logo>
       Nuxt UI Pro
       <UBadge label="SaaS"
-              variant="subtle"
-              class="mb-0.5" />
+        variant="subtle"
+        class="mb-0.5" />
     </template>
 
     <template #right>
       <UButton label="Sign in"
-               color="gray"
-               to="/login" />
+        color="gray"
+        to="/login" />
       <UButton label="Sign up"
-               icon="i-heroicons-arrow-right-20-solid"
-               trailing
-               color="black"
-               to="/signup"
-               class="hidden lg:flex" />
+        icon="i-heroicons-arrow-right-20-solid"
+        trailing
+        color="black"
+        to="/signup"
+        class="hidden lg:flex" />
     </template>
 
     <template #panel>
       <UNavigationTree :links="mapContentNavigation(navigation)"
-                       default-open />
+        default-open />
     </template>
   </UHeader>
 </template>
