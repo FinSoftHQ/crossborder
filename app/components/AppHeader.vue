@@ -21,7 +21,10 @@ const links = [{
   }, {
     label: 'รายได้จากการขาย',
     to: '/NaLoeiWeb/financeStock'
-  }]
+  },{
+    label: 'รายการคำสั่งซื้อ',
+    to: '/ecommerce/reportorder',
+  },]
 }, {
   label: 'สวนผู้ขาย',
   to: '/ecommerce/registerStore',
