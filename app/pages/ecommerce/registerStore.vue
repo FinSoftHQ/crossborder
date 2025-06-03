@@ -37,7 +37,7 @@
                   clip-rule="evenodd"></path>
               </svg>
             </a>
-            <a href="/ecommerce/learnMore"
+            <a href=""
               class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
               เรียนรู้เพิ่มเติม
               <svg class="mr-2 ml-1 w-5 h-5"
