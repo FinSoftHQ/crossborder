@@ -97,13 +97,13 @@ const links = [
 <template>
   <UHeader :links="links">
     <template #logo>
-      Nuxt UI Pro
-      <UBadge label="SaaS"
+      Ecommerce
+      <UBadge label="Prototype"
               variant="subtle"
               class="mb-0.5" />
     </template>
 
-    <template #right>
+    <!-- <template #right>
       <UButton label="Sign in"
                color="gray"
                to="/login" />
@@ -113,11 +113,11 @@ const links = [
                color="black"
                to="/signup"
                class="hidden lg:flex" />
-    </template>
+    </template> -->
 
-    <template #panel>
+    <!-- <template #panel>
       <UNavigationTree :links="mapContentNavigation(navigation)"
                        default-open />
-    </template>
+    </template> -->
   </UHeader>
 </template>

@@ -78,7 +78,7 @@
                                         <div class="ms-4 text-sm">
                                             <label for="credit-card"
                                                    class="font-medium leading-none text-gray-900 dark:text-white">
-                                                arada Coin</label>
+                                                KGO Coin</label>
                                             <p id="credit-card-text"
                                                class="mt-1 text-xs font-normal text-gray-500 dark:text-gray-400">จ่าย
                                                 ด้วยเหรียญในกระเป๋าของคุณ</p>
